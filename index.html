@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenwave Staffing LLC – Hire Top Talent Faster</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <!-- TOP INFO BAR -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="tel:+1 404 301-7997 ext: 800"><i class="fas fa-phone-alt"></i> Call Us: +1 404 301-7997</a>
+      <a href="mailto:info@greenwavestaff.com"><i class="fas fa-envelope"></i> info@greenwavestaff.com</a>
+    </div>
+    <div class="top-bar-right">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" style="margin:0 6px"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="margin-left:6px"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- HEADER -->
+  <header class="header" id="mainHeader">
+    <div class="logo">
+      <img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC">
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#industries">Industries</a>
+      <a href="#careers">Careers</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-btns">
+      <button class="btn-teal"><i class="fas fa-briefcase"></i> Hire Talent</button>
+      <button class="btn-outline-nav"><i class="fas fa-search"></i> Find Jobs</button>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+  <!-- MOBILE MENU -->
+  <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <!-- Mobile Menu Header: Logo + Close -->
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC">
+      </div>
+      <span class="close-menu" onclick="toggleMenu()"><i class="fas fa-times"></i></span>
+    </div>
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <a href="#about" onclick="toggleMenu()">About Us</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#industries" onclick="toggleMenu()">Industries</a>
+    <a href="#careers" onclick="toggleMenu()">Careers</a>
+    <a href="#blogs" onclick="toggleMenu()">Blogs</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <div class="mobile-btns">
+      <button class="btn-teal" style="justify-content:center"><i class="fas fa-briefcase"></i> Hire Talent</button>
+      <button class="btn-outline-nav" style="justify-content:center"><i class="fas fa-search"></i> Find Jobs</button>
+    </div>
+  </div>
+  <!-- HERO -->
+  <section class="hero-slider" id="home">
+    <div class="consultation-tab" onclick="openConsultForm()">
+      <span><i class="fas fa-calendar-check"></i> Free Consultation</span>
+    </div>
+    <div class="hs-track" id="hsTrack">
+      <!-- SLIDE 1 — Left aligned -->
+      <div class="hs-slide hs-slide--1">
+        <div class="hs-overlay"></div>
+        <div class="hs-container">
+          <div class="hs-content hs-content--left">
+            <div class="hs-badge">Our Vision to Grow Better</div>
+            <h1 class="hs-title">Connecting the Best Employees <span>with the Best Companies</span></h1>
+            <p class="hs-desc">Greenwave helps you to find the best temporary, permanent and contract bases staff, since
+              we can expose you to a larger pool of candidates.</p>
+            <a href="#about" class="hs-btn">READ MORE</a>
+          </div>
+        </div>
+      </div>
+      <!-- SLIDE 2 — Center aligned -->
+      <div class="hs-slide hs-slide--2">
+        <div class="hs-overlay"></div>
+        <div class="hs-container">
+          <div class="hs-content hs-content--center">
+            <div class="hs-badge">Hire the Best</div>
+            <h1 class="hs-title">Hire Better, Faster!</h1>
+            <p class="hs-desc">We will save your time and money by sourcing candidates, screening resumes, and
+              conducting interviews.</p>
+            <a href="#contact" class="hs-btn">READ MORE</a>
+          </div>
+        </div>
+      </div>
+      <!-- SLIDE 3 — Right aligned -->
+      <div class="hs-slide hs-slide--3">
+        <div class="hs-overlay"></div>
+        <div class="hs-container">
+          <div class="hs-content hs-content--right">
+            <div class="hs-badge">Access to a larger pool of</div>
+            <h1 class="hs-title">We Are Hand-in-Hand <span>In Finding The One</span></h1>
+            <p class="hs-desc">Helping the Employers to find the right talent, at the same time best jobs for the
+              employee</p>
+            <a href="#careers" class="hs-btn">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Arrows — hidden on mobile -->
+    <button class="hs-arrow hs-prev" id="hsPrev" aria-label="Previous slide">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="hs-arrow hs-next" id="hsNext" aria-label="Next slide">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <!-- Dots -->
+    <div class="hs-dots" id="hsDots">
+      <button class="hs-dot active" data-index="0"></button>
+      <button class="hs-dot" data-index="1"></button>
+      <button class="hs-dot" data-index="2"></button>
+    </div>
+  </section>
+  <!-- Consultation Form Modal -->
+  <div class="consult-overlay" id="consultOverlay" onclick="handleOverlayClick(event)">
+    <div class="consult-panel" id="consultPanel">
+      <button class="consult-close" onclick="closeConsultForm()"><i class="fas fa-times"></i></button>
+      <div class="consult-header">
+        <div class="consult-icon"><i class="fas fa-calendar-check"></i></div>
+        <h2>Free Consultation</h2>
+        <p>Tell us your needs and we'll connect you with the right talent — fast.</p>
+      </div>
+      <div class="consult-body">
+        <div class="consult-field">
+          <label>Full Name</label>
+          <input type="text" placeholder="John Smith" id="cName">
+        </div>
+        <div class="consult-field">
+          <label>Email Address</label>
+          <input type="email" placeholder="john@company.com" id="cEmail">
+        </div>
+        <div class="consult-field">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+1 (555) 000-0000" id="cPhone">
+        </div>
+        <div class="consult-field">
+          <label>Company Name</label>
+          <input type="text" placeholder="Your Company" id="cCompany">
+        </div>
+        <div class="consult-field">
+          <label>What are you looking for?</label>
+          <select id="cNeed">
+            <option value="">Select an option</option>
+            <option>Hire Talent / Staff</option>
+            <option>Find a Job</option>
+            <option>Workforce Consulting</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="consult-field">
+          <label>Message (Optional)</label>
+          <textarea placeholder="Tell us more about your requirement..." id="cMessage" rows="3"></textarea>
+        </div>
+        <button class="consult-submit" onclick="submitConsultForm()">
+          <i class="fas fa-paper-plane"></i> Book My Free Consultation
+        </button>
+        <p class="consult-note"><i class="fas fa-lock"></i> Your info is 100% secure and never shared.</p>
+      </div>
+    </div>
+  </div>
+  <!-- CLIENT LOGOS SLIDER -->
+  <section class="logos-section">
+    <p class="logos-heading">Trusted By Leading Businesses</p>
+    <div class="logos-track-wrap">
+      <div class="logos-track">
+        <div class="logo-item">
+          <img src="assets/img/images/Trillian.jpg" alt="TechCorp">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/images/Wave-Labs.png" alt="NovaBridge">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/images/prr.png" alt="PrimeFocus">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/images/pricee.png" alt="GlobalHire">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/images/lantro.jpg" alt="SkyTalent">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/images/Trillian.jpg" alt="TechCorp">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/images/Wave-Labs.png" alt="NovaBridge">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/images/prr.png" alt="PrimeFocus">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/images/pricee.png" alt="GlobalHire">
+        </div>
+        <div class="logo-item">
+          <img src="assets/img/images/lantro.jpg" alt="SkyTalent">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- QUICK LEAD FORM -->
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="about-img-wrap fade-in">
+        <img src="assets/img/images/aboutsectionimage.webp" alt="Greenwave Team">
+        <div class="about-img-overlay">
+          <div class="big">15+</div>
+          <div class="sm">Years Experience</div>
+        </div>
+      </div>
+      <div class="about-content fade-up delay-2">
+        <div class="section-tag">About Us</div>
+        <h2>Your Reliable Staffing & Recruitment Partner</h2>
+        <p>Greenwave Staffing INC is a global staffing company having hands on experience in providing staffing
+          solutions.</p>
+        <p>We handle many of the time-consuming aspects of recruitment, such as sourcing candidates, screening resumes,
+          and conducting interviews. This can save employers a significant amount of time and money.</p>
+        <p>We often have extensive networks of job seekers, which can increase the chances of finding the right
+          candidate for a role.
+        </p>
+        <a href="#" class="btn-teal" style="display:inline-flex">About Us <i class="fas fa-arrow-right"
+            style="margin-left:8px"></i></a>
+      </div>
+    </div>
+  </section>
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="stats-inner">
+      <div class="stat-card fade-up">
+        <div class="stat-num" data-target="500">0</div>
+        <div class="stat-label">Successful Placements</div>
+      </div>
+      <div class="stat-card fade-up delay-1">
+        <div class="stat-num" data-target="150">0</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-card fade-up delay-2">
+        <div class="stat-num" data-target="10">0</div>
+        <div class="stat-label">Industries Served</div>
+      </div>
+      <div class="stat-card fade-up delay-3">
+        <div class="stat-num" data-target="95" data-suffix="%">0</div>
+        <div class="stat-label">Client Retention</div>
+      </div>
+    </div>
+  </section>
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="services-bg-shape"></div>
+
+    <div class="section-header fade-up">
+      <div class="section-tag">Leading</div>
+      <h2>Effective <span class="highlight-text">Solutions</span></h2>
+      <p>
+        Our timely communication and effective response to our clients separates us from others in the process of
+        meeting our client’s requirements.
+      </p>
+    </div>
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card fade-up">
+        <div class="service-card-inner">
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="service-icon-glow"></div>
+          </div>
+          <div class="service-number">01</div>
+          <h3>US Staffing Augmentation</h3>
+          <p>
+            We provide highly skilled professionals to US-based companies across IT and Non-IT sectors.
+            Our streamlined hiring process ensures quick turnaround, quality screening, and perfect talent alignment
+            with your business goals.
+          </p>
+          <div class="service-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="service-card fade-up delay-1">
+        <div class="service-card-inner">
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="service-icon-glow"></div>
+          </div>
+          <div class="service-number">02</div>
+          <h3>Domestic Staffing</h3>
+          <p>
+            We deliver reliable hiring solutions across India, helping businesses find
+            qualified professionals for permanent, contract, and project-based roles
+            across multiple industries.
+          </p>
+          <div class="service-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="service-card fade-up delay-2">
+        <div class="service-card-inner">
+          <div class="service-icon-wrap">
+            <div class="service-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="service-icon-glow"></div>
+          </div>
+          <div class="service-number">03</div>
+          <h3>Recruiting Training & Placement</h3>
+          <p>
+            We offer recruitment training programs and placement assistance to build
+            job-ready professionals. Our structured approach ensures candidates are
+            industry-prepared and aligned with employer expectations.
+          </p>
+          <div class="service-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- WHY CHOOSE US -->
+  <section class="why-section">
+    <div class="why-inner">
+      <div class="why-content fade-up">
+        <div class="section-tag">Why Greenwave</div>
+        <h2>Why Companies Choose Greenwave</h2>
+        <p>We combine deep industry expertise, a vast talent network, and a client-first approach to deliver exceptional
+          hiring outcomes — every time.</p>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-bolt"></i></div>
+            <div class="why-point-text">Faster Hiring Turnaround</div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="why-point-text">Quality Screened Candidates</div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-industry"></i></div>
+            <div class="why-point-text">Industry Specific Recruiters</div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-tags"></i></div>
+            <div class="why-point-text">Cost Effective Process</div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-user-cog"></i></div>
+            <div class="why-point-text">Dedicated Account Managers</div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+            <div class="why-point-text">Scalable Workforce Solutions</div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual fade-in delay-2">
+        <div class="why-float">
+          <div class="num">98%</div>
+          <div>
+            <div class="lbl" style="font-size:12px;color:var(--gray-text);font-weight:600">Satisfaction Rate</div>
+          </div>
+        </div>
+        <div class="why-img-wrap">
+          <img src="assets/img/images/whychooseus.webp" alt="Team Working">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOR EMPLOYERS / JOB SEEKERS -->
+  <section class="dual-section">
+    <div class="dual-inner">
+      <div class="dual-card dark fade-up">
+        <h3>Hire Better Talent, Faster</h3>
+        <p>Our expert recruiters identify and deliver skilled candidates quickly — reducing your time-to-hire and
+          ensuring quality every step of the way.</p>
+        <button class="btn-white"><i class="fas fa-users"></i> Request Talent</button>
+      </div>
+      <div class="dual-card teal-grad fade-up delay-2">
+        <h3>Find Your Next Opportunity</h3>
+        <p>Explore rewarding jobs with trusted employers. Upload your resume and let our team connect you with the best
+          matching roles in your field.</p>
+        <button class="btn-white"><i class="fas fa-upload"></i> Upload Resume</button>
+      </div>
+    </div>
+  </section>
+  <!-- INDUSTRIES -->
+  <section class="industries-section" id="industries">
+    <div class="ind-bg-orb"></div>
+    <div class="section-header fade-up">
+      <div class="section-tag">Incredibly</div>
+      <h2>Effective Case <span class="highlight-text">Studies</span></h2>
+      <p>We have specialized recruiters with deep expertise across a wide range of industries.</p>
+    </div>
+    <div class="ind-carousel-wrapper">
+      <button class="ind-arrow ind-prev" onclick="indSlide(-1)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="ind-carousel-viewport">
+        <div class="ind-carousel-track" id="indTrack">
+          <!-- Leadership -->
+          <div class="ind-card">
+            <img src="assets/img/images/leadership.webp" alt="Leadership">
+            <div class="ind-card-overlay"></div>
+            <div class="ind-card-content">
+              <div class="ind-icon"><i class="fas fa-user-tie"></i></div>
+              <h4>Leadership</h4>
+              <p>Company Values & The Relationship</p>
+            </div>
+          </div>
+          <!-- Recruiting-->
+          <div class="ind-card">
+            <img src="assets/img/images/recruiting.webp" alt="Recruiting">
+            <div class="ind-card-overlay"></div>
+            <div class="ind-card-content">
+              <div class="ind-icon"><i class="fas fa-users"></i></div>
+              <h4>Recruiting</h4>
+              <p>Shared Time Human Resources Management</p>
+            </div>
+          </div>
+          <!-- Values -->
+          <div class="ind-card">
+            <img src="assets/img/images/values.webp" alt="Values">
+            <div class="ind-card-overlay"></div>
+            <div class="ind-card-content">
+              <div class="ind-icon"><i class="fas fa-handshake"></i></div>
+              <h4>Values</h4>
+              <p>Six Essential Steps To Writing Successful Job</p>
+            </div>
+          </div>
+          <!-- Presale -->
+          <div class="ind-card">
+            <img src="assets/img/images/pre-sale.webp" alt="Presale">
+            <div class="ind-card-overlay"></div>
+            <div class="ind-card-content">
+              <div class="ind-icon"><i class="fas fa-briefcase"></i></div>
+              <h4>Presale</h4>
+              <p>Time HR Prepares Plastic Contract Manufacturer</p>
+            </div>
+          </div>
+          <!-- Human Resources -->
+          <div class="ind-card">
+            <img src="assets/img/images/hr-image.webp" alt="Human Resources">
+            <div class="ind-card-overlay"></div>
+            <div class="ind-card-content">
+              <div class="ind-icon"><i class="fas fa-id-badge"></i></div>
+              <h4>Human Resources</h4>
+              <p>Essential Steps to Writing Job Description</p>
+            </div>
+          </div>
+          <!-- Coaching -->
+          <div class="ind-card">
+            <img src="assets/img/images/coaching.webp" alt="Coaching">
+            <div class="ind-card-overlay"></div>
+            <div class="ind-card-content">
+              <div class="ind-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+              <h4>Coaching</h4>
+              <p>Complex Dismissal for a Small Company</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="ind-arrow ind-next" onclick="indSlide(1)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="ind-dots" id="indDots"></div>
+  </section>
+  <!-- JOB APPLY FORM -->
+  <section class="apply-section" id="careers">
+    <div class="apply-inner">
+      <!-- LEFT: Image Column -->
+      <div class="apply-left fade-in">
+        <div class="apply-img-wrap">
+          <img src="assets/img/images/jobapplicationsection.webp" alt="Career Opportunity">
+          <div class="apply-img-overlay"></div>
+          <div class="apply-img-badge">
+            <div class="apply-badge-icon"><i class="fas fa-briefcase"></i></div>
+            <div>
+              <div class="apply-badge-num">500+</div>
+              <div class="apply-badge-lbl">Jobs Placed Monthly</div>
+            </div>
+          </div>
+          <div class="apply-img-tag"><i class="fas fa-circle-check"></i> Hiring Actively</div>
+        </div>
+      </div>
+      <!-- RIGHT: Form Column -->
+      <div class="apply-right fade-up delay-1">
+        <div class="section-header">
+          <div class="section-tag">Join Us</div>
+          <h2>Apply For Jobs <span class="highlight-text">Instantly</span></h2>
+          <p>Submit your application and our team will review your profile and connect you with matching opportunities.
+          </p>
+        </div>
+        <div class="apply-card">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" placeholder="Your full name">
+            </div>
+            <div class="form-group">
+              <label>Mobile *</label>
+              <input type="tel" placeholder="+1 (000) 000-0000">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" placeholder="you@email.com">
+            </div>
+            <div class="form-group">
+              <label>Preferred Role *</label>
+              <input type="text" placeholder="e.g. Software Engineer">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Years of Experience</label>
+            <select>
+              <option>Select experience</option>
+              <option>0–1 years (Fresher)</option>
+              <option>1–3 years</option>
+              <option>3–5 years</option>
+              <option>5–10 years</option>
+              <option>10+ years</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Upload Resume *</label>
+            <div class="file-input-wrap">
+              <div class="file-label">
+                <i class="fas fa-cloud-upload-alt"></i> Click to upload resume (PDF, DOC)
+              </div>
+              <input type="file" accept=".pdf,.doc,.docx">
+            </div>
+          </div>
+          <button class="btn-form">
+            Submit Application <i class="fas fa-paper-plane" style="margin-left:8px"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TESTIMONIALS -->
+  <section class="testi-section">
+    <div class="section-header fade-up" style="max-width:640px;margin:0 auto 48px;text-align:center;">
+      <div class="section-tag">Testimonials</div>
+      <h2>What Clients Say</h2>
+    </div>
+    <div class="testi-slider">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Greenwave helped us close urgent positions quickly. Their team understood our requirements perfectly and
+            delivered quality candidates within days."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">M</div>
+            <div>
+              <div class="testi-name">Michael Roberts</div>
+              <div class="testi-role">HR Director, TechCorp Inc.</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Professional team with excellent support. From the first call to final placement, Greenwave was with us
+            every step of the way. Highly reliable!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">S</div>
+            <div>
+              <div class="testi-name">Sarah Johnson</div>
+              <div class="testi-role">CEO, NovaBridge Solutions</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Highly recommended staffing partner. We've worked with Greenwave for 3 years now and they consistently
+            deliver top quality professionals on time."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">A</div>
+            <div>
+              <div class="testi-name">Arun Sharma</div>
+              <div class="testi-role">Operations Head, LogixPro</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Excellent experience with Greenwave's contract staffing. They found us skilled workers in under 48 hours.
+            Will definitely use their services again."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">P</div>
+            <div>
+              <div class="testi-name">Priya Menon</div>
+              <div class="testi-role">Plant Manager, MediStaff</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Their payroll management service has been a game-changer for us. Accurate, timely, fully compliant. Takes
+            a huge load off our HR department."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">R</div>
+            <div>
+              <div class="testi-name">Rajesh Kumar</div>
+              <div class="testi-role">CFO, FinEdge Corp</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-nav" id="testiNav">
+      <button class="testi-dot active" onclick="goTesti(0)"></button>
+      <button class="testi-dot" onclick="goTesti(1)"></button>
+      <button class="testi-dot" onclick="goTesti(2)"></button>
+    </div>
+  </section>
+  <!-- BLOGS -->
+  <section class="blog-section" id="blogs">
+    <div class="section-header fade-up" style="text-align:center;max-width:640px;margin:0 auto 48px;">
+      <div class="section-tag">Insights</div>
+      <h2>Latest Insights & Hiring Trends</h2>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card fade-up">
+        <div class="blog-img" style="background:#e0f7fa;">
+          <img class="blog-img-inner" src="assets/img/images/blogimageone.webp" alt="Blog">
+          <span class="blog-cat">Trends</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">April 10, 2026 &nbsp;•&nbsp; 5 min read</div>
+          <h4>Top Hiring Trends in 2026</h4>
+          <p>Discover the latest workforce trends shaping the recruitment landscape this year and how to stay ahead.</p>
+          <span class="blog-read">Read More <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+      <div class="blog-card fade-up delay-1">
+        <div class="blog-img" style="background:#e0f7fa;">
+          <img class="blog-img-inner" src="assets/img/images/blogimagetwo.webp" alt="Blog">
+          <span class="blog-cat">Staffing</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">April 5, 2026 &nbsp;•&nbsp; 4 min read</div>
+          <h4>Contract Staffing Benefits</h4>
+          <p>Why more companies are turning to contract staffing to build flexible, scalable teams in 2026.</p>
+          <span class="blog-read">Read More <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+      <div class="blog-card fade-up delay-2">
+        <div class="blog-img" style="background:#e0f7fa;">
+          <img class="blog-img-inner" src="assets/img/images/blogimagethree.webp" alt="Blog">
+          <span class="blog-cat">Tips</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">March 28, 2026 &nbsp;•&nbsp; 6 min read</div>
+          <h4>How to Reduce Recruitment Time</h4>
+          <p>Practical strategies to streamline your hiring process and cut time-to-fill without sacrificing quality.
+          </p>
+          <span class="blog-read">Read More <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+      <div class="blog-card fade-up delay-3">
+        <div class="blog-img" style="background:#e0f7fa;">
+          <img class="blog-img-inner" src="assets/img/images/blogimagefour.webp" alt="Blog">
+          <span class="blog-cat">Career</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">March 18, 2026 &nbsp;•&nbsp; 3 min read</div>
+          <h4>Interview Tips for Candidates</h4>
+          <p>Ace your next interview with these proven tips and strategies from Greenwave's expert career coaches.</p>
+          <span class="blog-read">Read More <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="blog-cta">
+      <button class="btn-teal" style="margin:0 auto"><i class="fas fa-newspaper"></i> View All Blogs</button>
+    </div>
+  </section>
+  <!-- FINAL CTA -->
+  <section class="cta-section">
+    <div class="cta-inner fade-up">
+      <h2>Need Skilled Employees Fast?</h2>
+      <p>Talk with our staffing experts today. We'll help you find the right talent — quickly, affordably, and at scale.
+      </p>
+      <div class="cta-btns">
+        <a href="#contact" class="btn-cta-white"><i class="fas fa-phone-alt"></i> Contact Us</a>
+        <a href="https://wa.me/1XXXXXXXXXX" class="btn-cta-outline"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:14px">
+          <h4>GREENWAVE STAFFING INC</h4>
+        </div>
+        <p>
+          Greenwave Staffing Corporation provides expert global and domestic staffing solutions for your organization.
+          We specialize in connecting businesses with highly skilled, pre-screened professionals across multiple
+          industries and job roles. Our strategic hiring approach ensures that companies gain access to top talent while
+          reducing time-to-hire and recruitment costs.
+        </p>
+        <!-- Social Icons (NOT REMOVED) -->
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          <li><a href="#careers"><i class="fas fa-chevron-right"></i> Careers</a></li>
+          <li><a href="#blogs"><i class="fas fa-chevron-right"></i> Blogs</a></li>
+          <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <!-- Services -->
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i> US Staffing</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i> Domestic Staffing</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i> Contract Hiring</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i> Payroll</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i> RPO Services</a></li>
+        </ul>
+      </div>
+      <!-- New Get In Touch Column -->
+      <div class="footer-col footer-contact">
+        <h5>Get In Touch</h5>
+        <div class="office-block">
+          <strong>USA Office (Head Quarters):</strong>
+          <p>8735 Dunwoody Place STE R Atlanta, GA 30350</p>
+        </div>
+        <div class="office-block">
+          <strong>UK Office</strong>
+          <p>Brunswick Street, Cheltenham, Gloucester, UK GL504HA</p>
+        </div>
+        <div class="office-block">
+          <strong>Canada Office:</strong>
+          <p>Unit 1707, Mississauga, Ontario L5B0A1</p>
+        </div>
+        <div class="office-block">
+          <strong> Contact</strong>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@greenwavestaff.com">info@greenwavestaff.com</a>
+          </p>
+          <p>
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+14043017997">404 301-7997</a> ext: 800
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p style="color:rgba(241, 234, 234, 0.855);font-size:13px">
+        © <span id="year"></span> Greenwave Staffing INC. All rights reserved.
+      </p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+  </footer>
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/9123456789" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <!-- POPUP -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
