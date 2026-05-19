@@ -29,14 +29,28 @@
     </div>
   </div>
   <!-- HEADER -->
+  <!-- HEADER -->
   <header class="header" id="mainHeader">
     <div class="logo">
       <img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC">
     </div>
     <nav class="nav">
       <a href="index.html" class="active">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="#services">Services</a>
+      <a href="#">About Us</a>
+      <div class="nav-dropdown">
+        <a href="#services" class="nav-dropdown-toggle">
+          Services <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="#staffing">Staffing Augmentation </a>
+          <a href="#recruitment">Direct Hire Staffing</a>
+          <a href="#consulting">Contract to Hire Staffing</a>
+          <a href="#payroll">Contract Staffing</a>
+          <a href="#">Offshore Staffing </a>
+          <a href="#">Recruitment Process Outsourcing </a>
+        </div>
+      </div>
+
       <a href="#industries">Industries</a>
       <a href="#careers">Careers</a>
       <a href="#blogs">Blogs</a>
@@ -50,10 +64,10 @@
       <span></span><span></span><span></span>
     </div>
   </header>
+
   <!-- MOBILE MENU -->
   <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
   <div class="mobile-menu" id="mobileMenu">
-    <!-- Mobile Menu Header: Logo + Close -->
     <div class="mobile-menu-header">
       <div class="mobile-logo">
         <img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC">
@@ -62,7 +76,20 @@
     </div>
     <a href="index.html" onclick="toggleMenu()">Home</a>
     <a href="#about" onclick="toggleMenu()">About Us</a>
-    <a href="#services" onclick="toggleMenu()">Services</a>
+    <div class="mobile-dropdown">
+      <input type="checkbox" id="servicesToggle" class="dropdown-toggle-input">
+      <label for="servicesToggle" class="mobile-dropdown-toggle">
+        Services <i class="fas fa-chevron-down"></i>
+      </label>
+      <div class="mobile-dropdown-menu">
+        <a href="#" onclick="toggleMenu()">Staffing Augmentation</a>
+        <a href="#" onclick="toggleMenu()">Direct Hire Staffing</a>
+        <a href="#" onclick="toggleMenu()">Contract to Hire Staffing</a>
+        <a href="#" onclick="toggleMenu()">Contract Staffing</a>
+        <a href="#" onclick="toggleMenu()">Offshore Staffing </a>
+        <a href="#" onclick="toggleMenu()">Recruitment Process Outsourcing</a>
+      </div>
+    </div>
     <a href="#industries" onclick="toggleMenu()">Industries</a>
     <a href="#careers" onclick="toggleMenu()">Careers</a>
     <a href="#blogs" onclick="toggleMenu()">Blogs</a>
@@ -229,14 +256,14 @@
         </div>
       </div>
       <div class="about-content fade-up delay-2">
-        <div class="section-tag">About Us</div>
-        <h2>Your Reliable Staffing & Recruitment Partner</h2>
-        <p>Greenwave Staffing INC is a global staffing company having hands on experience in providing staffing
-          solutions.</p>
-        <p>We handle many of the time-consuming aspects of recruitment, such as sourcing candidates, screening resumes,
-          and conducting interviews. This can save employers a significant amount of time and money.</p>
-        <p>We often have extensive networks of job seekers, which can increase the chances of finding the right
-          candidate for a role.
+        <div class="section-tag">About Greenwave Staffing</div>
+        <h2>Your Reliable Recruitment Partner</h2>
+        <p>With over 15 years of industry experience and a track record of 500+ successful placements, we specialize
+          in connecting the right professionals with the right opportunities</p>
+        <p>Our mission is to handle the recruitment lifecycle so you can remain focused on growing your core business
+        </p>
+        <p> We pride ourselves on a 98% client satisfaction rate built on deep industry expertise and a vast talent
+          network
         </p>
         <a href="#" class="btn-teal" style="display:inline-flex">About Us <i class="fas fa-arrow-right"
             style="margin-left:8px"></i></a>
@@ -270,86 +297,123 @@
 
     <div class="section-header fade-up">
       <div class="section-tag">Leading</div>
-      <h2>Effective <span class="highlight-text">Solutions</span></h2>
-      <p>
-        Our timely communication and effective response to our clients separates us from others in the process of
-        meeting our client’s requirements.
-      </p>
+      <h2>Our Specialized <span class="highlight-text">Staffing Offerings</span></h2>
+      <p>We provide comprehensive recruitment and workforce solutions tailored to your unique business requirements</p>
     </div>
-    <div class="services-grid">
-      <!-- Service 1 -->
-      <div class="service-card fade-up">
-        <div class="service-card-inner">
-          <div class="service-icon-wrap">
-            <div class="service-icon">
-              <i class="fas fa-briefcase"></i>
+
+    <div class="services-carousel-wrap">
+      <!-- Arrows -->
+      <button class="svc-arrow svc-prev" onclick="svcSlide(-1)" aria-label="Previous">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="svc-arrow svc-next" onclick="svcSlide(1)" aria-label="Next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Viewport -->
+      <div class="svc-viewport">
+        <div class="svc-track" id="svcTrack">
+
+          <div class="service-card">
+            <div class="service-card-inner">
+              <div class="service-icon-wrap">
+                <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="service-icon-glow"></div>
+              </div>
+              <div class="service-number">01</div>
+              <h3>Staffing Augmentation</h3>
+              <p>Specialized delivery of highly skilled professionals to US-based companies across both IT and Non-IT
+                sectors, ensuring perfect talent alignment with your goals.</p>
+              <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
             </div>
-            <div class="service-icon-glow"></div>
           </div>
-          <div class="service-number">01</div>
-          <h3>US Staffing Augmentation</h3>
-          <p>
-            We provide highly skilled professionals to US-based companies across IT and Non-IT sectors.
-            Our streamlined hiring process ensures quick turnaround, quality screening, and perfect talent alignment
-            with your business goals.
-          </p>
-          <div class="service-arrow">
-            <i class="fas fa-arrow-right"></i>
-          </div>
-        </div>
-      </div>
-      <!-- Service 2 -->
-      <div class="service-card fade-up delay-1">
-        <div class="service-card-inner">
-          <div class="service-icon-wrap">
-            <div class="service-icon">
-              <i class="fas fa-users"></i>
+
+          <div class="service-card">
+            <div class="service-card-inner">
+              <div class="service-icon-wrap">
+                <div class="service-icon"><i class="fas fa-users"></i></div>
+                <div class="service-icon-glow"></div>
+              </div>
+              <div class="service-number">02</div>
+              <h3>Direct Hire Staffing</h3>
+              <p>Identify and secure top-tier talent for long-term, permanent roles that drive your organization's
+                future growth and success.</p>
+              <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
             </div>
-            <div class="service-icon-glow"></div>
           </div>
-          <div class="service-number">02</div>
-          <h3>Domestic Staffing</h3>
-          <p>
-            We deliver reliable hiring solutions across India, helping businesses find
-            qualified professionals for permanent, contract, and project-based roles
-            across multiple industries.
-          </p>
-          <div class="service-arrow">
-            <i class="fas fa-arrow-right"></i>
-          </div>
-        </div>
-      </div>
-      <!-- Service 3 -->
-      <div class="service-card fade-up delay-2">
-        <div class="service-card-inner">
-          <div class="service-icon-wrap">
-            <div class="service-icon">
-              <i class="fas fa-user-graduate"></i>
+
+          <div class="service-card">
+            <div class="service-card-inner">
+              <div class="service-icon-wrap">
+                <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                <div class="service-icon-glow"></div>
+              </div>
+              <div class="service-number">03</div>
+              <h3>Contract-to-Hire Staffing</h3>
+              <p>Evaluate a candidate's fit within your company culture and workflow before making a permanent
+                commitment.</p>
+              <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
             </div>
-            <div class="service-icon-glow"></div>
           </div>
-          <div class="service-number">03</div>
-          <h3>Recruiting Training & Placement</h3>
-          <p>
-            We offer recruitment training programs and placement assistance to build
-            job-ready professionals. Our structured approach ensures candidates are
-            industry-prepared and aligned with employer expectations.
-          </p>
-          <div class="service-arrow">
-            <i class="fas fa-arrow-right"></i>
+
+          <div class="service-card">
+            <div class="service-card-inner">
+              <div class="service-icon-wrap">
+                <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+                <div class="service-icon-glow"></div>
+              </div>
+              <div class="service-number">04</div>
+              <h3>Contract Staffing</h3>
+              <p>Build flexible, scalable teams with high-quality professionals for project-based needs and temporary
+                assignments.</p>
+              <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+            </div>
           </div>
-        </div>
-      </div>
+
+          <div class="service-card">
+            <div class="service-card-inner">
+              <div class="service-icon-wrap">
+                <div class="service-icon"><i class="fas fa-globe"></i></div>
+                <div class="service-icon-glow"></div>
+              </div>
+              <div class="service-number">05</div>
+              <h3>Offshore Staffing</h3>
+              <p>Leverage our domestic staffing capabilities in India to access a global talent pool for cost-effective
+                and reliable hiring solutions.</p>
+              <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-inner">
+              <div class="service-icon-wrap">
+                <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                <div class="service-icon-glow"></div>
+              </div>
+              <div class="service-number">06</div>
+              <h3>Recruitment Process Outsourcing</h3>
+              <p>Streamline your HR operations by letting us manage your end-to-end recruitment process and payroll
+                support.</p>
+              <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+            </div>
+          </div>
+
+        </div><!-- /.svc-track -->
+      </div><!-- /.svc-viewport -->
+
+      <!-- Dots -->
+      <div class="svc-dots" id="svcDots"></div>
     </div>
   </section>
+
   <!-- WHY CHOOSE US -->
   <section class="why-section">
     <div class="why-inner">
       <div class="why-content fade-up">
         <div class="section-tag">Why Greenwave</div>
-        <h2>Why Companies Choose Greenwave</h2>
-        <p>We combine deep industry expertise, a vast talent network, and a client-first approach to deliver exceptional
-          hiring outcomes — every time.</p>
+        <h2>Why Leading Companies Choose Greenwave</h2>
+        <p>We combine a client-first approach with data-backed recruitment strategies to deliver exceptional outcomes
+          every time</p>
         <div class="why-points">
           <div class="why-point">
             <div class="why-point-icon"><i class="fas fa-bolt"></i></div>
@@ -361,7 +425,7 @@
           </div>
           <div class="why-point">
             <div class="why-point-icon"><i class="fas fa-industry"></i></div>
-            <div class="why-point-text">Industry Specific Recruiters</div>
+            <div class="why-point-text">Industry Specific Expertise</div>
           </div>
           <div class="why-point">
             <div class="why-point-icon"><i class="fas fa-tags"></i></div>
@@ -393,18 +457,31 @@
   <!-- FOR EMPLOYERS / JOB SEEKERS -->
   <section class="dual-section">
     <div class="dual-inner">
+
       <div class="dual-card dark fade-up">
         <h3>Hire Better Talent, Faster</h3>
-        <p>Our expert recruiters identify and deliver skilled candidates quickly — reducing your time-to-hire and
-          ensuring quality every step of the way.</p>
-        <button class="btn-white"><i class="fas fa-users"></i> Request Talent</button>
+        <p>
+          Our expert recruiters identify and deliver skilled candidates quickly —
+          reducing your time-to-hire and ensuring quality every step of the way.
+        </p>
+
+        <button class="btn-white">
+          <i class="fas fa-user-plus"></i> Start Hiring
+        </button>
       </div>
+
       <div class="dual-card teal-grad fade-up delay-2">
         <h3>Find Your Next Opportunity</h3>
-        <p>Explore rewarding jobs with trusted employers. Upload your resume and let our team connect you with the best
-          matching roles in your field.</p>
-        <button class="btn-white"><i class="fas fa-upload"></i> Upload Resume</button>
+        <p>
+          Explore rewarding jobs with trusted employers. Upload your resume and
+          let our team connect you with the best matching roles in your field.
+        </p>
+
+        <button class="btn-white">
+          <i class="fas fa-briefcase"></i> Explore Careers
+        </button>
       </div>
+
     </div>
   </section>
   <!-- INDUSTRIES -->
@@ -749,11 +826,12 @@
       <div class="footer-col">
         <h5>Services</h5>
         <ul>
-          <li><a href="#services"><i class="fas fa-chevron-right"></i> US Staffing</a></li>
-          <li><a href="#services"><i class="fas fa-chevron-right"></i> Domestic Staffing</a></li>
-          <li><a href="#services"><i class="fas fa-chevron-right"></i> Contract Hiring</a></li>
-          <li><a href="#services"><i class="fas fa-chevron-right"></i> Payroll</a></li>
-          <li><a href="#services"><i class="fas fa-chevron-right"></i> RPO Services</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i>Staffing Augmentation</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i>Direct Hire Staffing</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i>Contract-to-Hire Staffing</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i>Contract Staffing</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i>Offshore Staffing</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i>Recruitment Process Outsourcing</a></li>
         </ul>
       </div>
       <!-- New Get In Touch Column -->
@@ -800,5 +878,4 @@
   <!-- POPUP -->
   <script src="assets/js/main.js"></script>
 </body>
-
 </html>

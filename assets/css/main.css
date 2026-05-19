@@ -409,38 +409,29 @@ img {
 }
 
 /* HERO */
-/* ── HERO SLIDER ─────────────────────────────────────── */
-
 /* ── SLIDER WRAPPER ───────────────────────────────────── */
-
-
-
 /* ── HERO SLIDE BACKGROUNDS ───────────────────────────── */
 .hs-slide--1 {
   background-image: url('../img/images/hero-slider-one.webp');
   background-size: cover;
   background-position: center center;
 }
-
 .hs-slide--2 {
   background-image: url('../img/images/hero-slider-two.webp');
   background-size: cover;
   background-position: center center;
 }
-
 .hs-slide--3 {
   background-image: url('../img/images/hero-slider-three.webp');
   background-size: cover;
   background-position: center center;
 }
-
 .hero-slider {
   position: relative;
   width: 100%;
   height: 600px;
   overflow: hidden;
 }
-
 /* ── TRACK ────────────────────────────────────────────── */
 .hs-track {
   display: flex;
@@ -449,7 +440,6 @@ img {
   transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
-
 /* ── SINGLE SLIDE ─────────────────────────────────────── */
 .hs-slide {
   width: calc(100% / 3);
@@ -459,13 +449,11 @@ img {
   position: relative;
   flex-shrink: 0;
 }
-
 .hs-overlay {
   position: absolute;
   inset: 0;
   background: rgba(10, 25, 41, 0.60);
 }
-
 /* ── INNER CONTAINER ──────────────────────────────────── */
 /*
    Key fix: use padding-left + padding-right of 8%
@@ -743,7 +731,7 @@ img {
 .hs-char {
   display: inline-block;
   opacity: 0;
-  transition: opacity 0.08s ease;
+  transition: opacity 0.83s ease;
 }
 
 .hs-char--teal {
@@ -755,7 +743,6 @@ img {
   min-height: 1.15em;
 }
 
-/* CONSULTATION SIDE TAB */
 /* CONSULTATION SIDE TAB */
 .consultation-tab {
   position: fixed;
@@ -780,17 +767,14 @@ img {
   letter-spacing: 0.3px;
   white-space: nowrap;
 }
-
 .consultation-tab:hover {
   background: var(--teal-dark);
 }
-
 .consultation-tab span {
   display: flex;
   align-items: center;
   gap: 7px;
 }
-
 /* OVERLAY */
 .consult-overlay {
   position: fixed;
@@ -1533,6 +1517,105 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Services Carousel ── */
+.services-carousel-wrap {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 56px; /* space for arrows */
+}
+
+.svc-viewport {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.svc-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Cards — width set by JS */
+.svc-track .service-card {
+  flex-shrink: 0;
+}
+
+/* ── Arrows ── */
+.svc-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+  z-index: 10;
+}
+.svc-arrow:hover {
+  background: rgba(8,176,208,0.25);
+  border-color: rgba(8,176,208,0.6);
+  transform: translateY(-60%) scale(1.08);
+}
+.svc-prev { left: 0; }
+.svc-next { right: 0; }
+
+/* ── Dots ── */
+.svc-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 36px;
+}
+.svc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, width 0.3s, border-radius 0.3s;
+  padding: 0;
+}
+.svc-dot.active {
+  background: #08B0D0;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ── Responsive padding ── */
+@media (max-width: 768px) {
+  .services-carousel-wrap {
+    padding: 0 44px;
+  }
+  .svc-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .services-carousel-wrap {
+    padding: 0 36px;
+  }
+}
+
+
+
+
+
+
+
 /* WHY CHOOSE */
 .why-section {
   padding: 90px 5%;
@@ -2550,12 +2633,10 @@ img {
   gap: 8px;
   transition: transform 0.15s, box-shadow 0.2s;
 }
-
 .btn-cta-white:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
 }
-
 .btn-cta-outline {
   background: transparent;
   color: #fff;
@@ -2581,7 +2662,7 @@ img {
 .footer {
   background: var(--navy);
   color: rgba(255, 255, 255, 0.75);
-  padding: 70px 5% 28px;
+  padding: 50px 5% 28px;
 }
 
 .footer-top {
@@ -3005,4 +3086,151 @@ img {
     height: 50px;
     font-size: 22px;
   }
+}
+
+
+
+
+
+
+
+
+/* header code */
+
+/* ── Desktop Dropdown (hover) ── */
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav-dropdown-toggle i {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-toggle i {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  min-width: 200px;
+  padding: 8px 0;
+  z-index: 999;
+  border-top: 3px solid #08B0D0 ;
+}
+
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #08B0D0;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
+  animation: fadeSlideDown 0.2s ease forwards;
+}
+
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, padding-left 0.15s;
+}
+
+.nav-dropdown-menu a:hover {
+  background: #f0faf6;
+  color: var(--teal);
+  padding-left: 26px;
+}
+
+/* ── Mobile Dropdown (checkbox hack) ── */
+.dropdown-toggle-input {
+  display: none;
+}
+
+.mobile-dropdown {
+  width: 100%;
+}
+
+.mobile-dropdown-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: inherit;
+  cursor: pointer;
+font-family: 'Poppins', sans-serif;
+}
+
+.mobile-dropdown-toggle i {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+/* Chevron rotates when checked */
+.dropdown-toggle-input:checked + .mobile-dropdown-toggle i {
+  transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0,0,0,0.03);
+  border-left: 3px solid #08B0D0;
+  margin: 0 12px 0 12px;
+  border-radius: 0 6px 6px 0;
+  transition: max-height 0.3s ease;
+}
+
+/* Expands when checked */
+.dropdown-toggle-input:checked ~ .mobile-dropdown-menu {
+  max-height: 300px;
+}
+
+.mobile-dropdown-menu a {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.85;
+  transition: opacity 0.2s, padding-left 0.2s;
+}
+
+.mobile-dropdown-menu a:hover {
+  opacity: 1;
+  padding-left: 28px;
 }

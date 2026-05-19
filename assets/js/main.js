@@ -367,4 +367,110 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
   document.getElementById("year").innerHTML =
     new Date().getFullYear();
+
+
+
+  // SERVICES CAROUSEL
+  (function () {
+    const track = document.getElementById('svcTrack');
+    const dotsContainer = document.getElementById('svcDots');
+    if (!track || !dotsContainer) return;
+
+    const cards = track.querySelectorAll('.service-card');
+    const viewport = track.parentElement;
+    const GAP = 24;
+    let current = 0;
+    let autoTimer;
+
+    function getVisible() {
+      const w = window.innerWidth;
+      if (w <= 580) return 1;
+      if (w <= 900) return 2;
+      return 3;
+    }
+
+    function totalSlides() {
+      return Math.max(1, cards.length - getVisible() + 1);
+    }
+
+    function setCardWidths() {
+      const visible = getVisible();
+      const vpWidth = viewport.getBoundingClientRect().width;
+      const cardWidth = (vpWidth - GAP * (visible - 1)) / visible;
+      cards.forEach(c => { c.style.width = cardWidth + 'px'; });
+      return cardWidth;
+    }
+
+    function cardStep() {
+      const visible = getVisible();
+      const vpWidth = viewport.getBoundingClientRect().width;
+      const cardWidth = (vpWidth - GAP * (visible - 1)) / visible;
+      return cardWidth + GAP;
+    }
+
+    function buildDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalSlides(); i++) {
+        const d = document.createElement('button');
+        d.className = 'svc-dot' + (i === current ? ' active' : '');
+        d.setAttribute('aria-label', `Slide ${i + 1}`);
+        d.addEventListener('click', () => { goTo(i); resetAuto(); });
+        dotsContainer.appendChild(d);
+      }
+    }
+
+    function updateDots() {
+      dotsContainer.querySelectorAll('.svc-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    function goTo(n) {
+      const max = totalSlides() - 1;
+      current = Math.max(0, Math.min(n, max));
+      track.style.transform = `translateX(-${current * cardStep()}px)`;
+      updateDots();
+    }
+
+    window.svcSlide = function (dir) {
+      const max = totalSlides() - 1;
+      const next = current + dir;
+      goTo(next < 0 ? max : next > max ? 0 : next);
+      resetAuto();
+    };
+
+    function resetAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => {
+        const max = totalSlides() - 1;
+        goTo(current >= max ? 0 : current + 1);
+      }, 4000);
+    }
+
+    // Touch swipe
+    let tx = 0;
+    track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+      const diff = tx - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) svcSlide(diff > 0 ? 1 : -1);
+    }, { passive: true });
+
+    // Resize: rebuild
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        current = 0;
+        setCardWidths();
+        buildDots();
+        goTo(0);
+      }, 150);
+    });
+
+    // Init
+    setCardWidths();
+    buildDots();
+    goTo(0);
+    resetAuto();
+  })();
 }); // END DOMContentLoaded
