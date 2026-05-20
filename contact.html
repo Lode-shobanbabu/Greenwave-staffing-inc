@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us – Greenwave Staffing LLC</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- TOP INFO BAR -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="tel:+1 404 301-7997 ext: 800"><i class="fas fa-phone-alt"></i> Call Us: +1 404 301-7997</a>
+      <a href="mailto:info@greenwavestaff.com"><i class="fas fa-envelope"></i> info@greenwavestaff.com</a>
+    </div>
+    <div class="top-bar-right">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" style="margin:0 6px"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="margin-left:6px"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- HEADER -->
+  <!-- HEADER -->
+  <header class="header" id="mainHeader">
+    <div class="logo">
+      <a href="index.html"><img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC"></a>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <div class="nav-dropdown">
+        <a href="#services" class="nav-dropdown-toggle">
+          Services <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="service-staffing-augmentation.html">Staffing Augmentation </a>
+          <a href="#recruitment">Direct Hire Staffing</a>
+          <a href="#consulting">Contract to Hire Staffing</a>
+          <a href="#payroll">Contract Staffing</a>
+          <a href="#">Offshore Staffing </a>
+          <a href="#">Recruitment Process Outsourcing </a>
+        </div>
+      </div>
+
+      <a href="#industries">Industries</a>
+      <a href="#careers">Careers</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-btns">
+      <button class="btn-teal"><i class="fas fa-briefcase"></i> Hire Talent</button>
+      <button class="btn-outline-nav"><i class="fas fa-search"></i> Find Jobs</button>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <a href="index.html"><img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC"></a>
+      </div>
+      <span class="close-menu" onclick="toggleMenu()"><i class="fas fa-times"></i></span>
+    </div>
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <a href="about.html" onclick="toggleMenu()">About Us</a>
+    <div class="mobile-dropdown">
+      <input type="checkbox" id="servicesToggle" class="dropdown-toggle-input">
+      <label for="servicesToggle" class="mobile-dropdown-toggle">
+        Services <i class="fas fa-chevron-down"></i>
+      </label>
+      <div class="mobile-dropdown-menu">
+        <a href="service-staffing-augmentation.html" onclick="toggleMenu()">Staffing Augmentation</a>
+        <a href="#" onclick="toggleMenu()">Direct Hire Staffing</a>
+        <a href="#" onclick="toggleMenu()">Contract to Hire Staffing</a>
+        <a href="#" onclick="toggleMenu()">Contract Staffing</a>
+        <a href="#" onclick="toggleMenu()">Offshore Staffing </a>
+        <a href="#" onclick="toggleMenu()">Recruitment Process Outsourcing</a>
+      </div>
+    </div>
+    <a href="#industries" onclick="toggleMenu()">Industries</a>
+    <a href="#careers" onclick="toggleMenu()">Careers</a>
+    <a href="#blogs" onclick="toggleMenu()">Blogs</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <div class="mobile-btns">
+      <button class="btn-teal" style="justify-content:center"><i class="fas fa-briefcase"></i> Hire
+        Talent</button>
+      <button class="btn-outline-nav" style="justify-content:center"><i class="fas fa-search"></i> Find
+        Jobs</button>
+    </div>
+  </div>
+
+  <!-- HERO BANNER -->
+      <section class="page-hero">
+        <div class="page-hero-tag">Who We Are</div>
+        <h1>Contact Us</h1>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            Contact
+        </div>
+    </section>
+  <!-- QUICK CONTACT STRIP -->
+ 
+  <!-- MAIN CONTACT: INFO + FORM -->
+  <section class="contact-main">
+    <div class="contact-inner">
+
+      <!-- LEFT: INFO -->
+      <div class="contact-info fade-in">
+        <div class="section-tag">Our Offices</div>
+        <h2>Global Reach, <span class="highlight-text">Local Touch</span></h2>
+        <p>With offices across the USA, UK, and Canada, Greenwave Staffing delivers expert recruitment support wherever
+          you are. Connect with the nearest team today.</p>
+
+        <div class="office-cards">
+          <div class="office-card">
+            <div class="office-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="office-details">
+              <h4>USA — Head Quarters</h4>
+              <p>8735 Dunwoody Place STE R<br>Atlanta, GA 30350</p>
+              <a href="tel:+14043017997"><i class="fas fa-phone-alt" style="font-size:11px;margin-right:5px"></i>+1 404
+                301-7997 ext: 800</a>
+            </div>
+          </div>
+          <div class="office-card">
+            <div class="office-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="office-details">
+              <h4>UK Office</h4>
+              <p>Brunswick Street, Cheltenham,<br>Gloucester, UK GL504HA</p>
+            </div>
+          </div>
+          <div class="office-card">
+            <div class="office-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="office-details">
+              <h4>Canada Office</h4>
+              <p>Unit 1707, Mississauga,<br>Ontario L5B0A1</p>
+            </div>
+          </div>
+          <div class="office-card">
+            <div class="office-icon"><i class="fas fa-envelope"></i></div>
+            <div class="office-details">
+              <h4>General Enquiries</h4>
+              <a href="mailto:info@greenwavestaff.com">info@greenwavestaff.com</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="social-strip">
+          <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          <a href="#" class="social-btn"><i class="fab fa-twitter"></i> Twitter</a>
+          <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i> Instagram</a>
+        </div> -->
+      </div>
+
+      <!-- RIGHT: FORM -->
+       <div class="apply-right fade-up delay-1">
+        <div class="section-header">
+          <div class="section-tag">Join Us</div>
+          <h2>Apply For Jobs <span class="highlight-text">Instantly</span></h2>
+          <p>Submit your application and our team will review your profile and connect you with matching opportunities.
+          </p>
+        </div>
+        <div class="apply-card">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" placeholder="Your full name">
+            </div>
+            <div class="form-group">
+              <label>Mobile *</label>
+              <input type="tel" placeholder="+1 (000) 000-0000">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" placeholder="you@email.com">
+            </div>
+            <div class="form-group">
+              <label>Preferred Role *</label>
+              <input type="text" placeholder="e.g. Software Engineer">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Years of Experience</label>
+            <select>
+              <option>Select experience</option>
+              <option>0–1 years (Fresher)</option>
+              <option>1–3 years</option>
+              <option>3–5 years</option>
+              <option>5–10 years</option>
+              <option>10+ years</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Upload Resume *</label>
+            <div class="file-input-wrap">
+              <div class="file-label">
+                <i class="fas fa-cloud-upload-alt"></i> Click to upload resume (PDF, DOC)
+              </div>
+              <input type="file" accept=".pdf,.doc,.docx">
+            </div>
+          </div>
+          <button class="btn-form">
+            Submit Application <i class="fas fa-paper-plane" style="margin-left:8px"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section class="quick-strip">
+    <div class="quick-inner">
+      <div class="quick-card fade-up">
+        <div class="quick-card-icon"><i class="fas fa-phone-alt"></i></div>
+        <div class="quick-card-body">
+          <h4>Call Us Directly</h4>
+          <p>Our team is available Mon–Fri, 9am–6pm EST.</p>
+          <a href="tel:+14043017997">+1 404 301-7997 ext: 800</a>
+        </div>
+      </div>
+      <div class="quick-card fade-up delay-1">
+        <div class="quick-card-icon"><i class="fas fa-envelope"></i></div>
+        <div class="quick-card-body">
+          <h4>Email Us</h4>
+          <p>Drop us a message and expect a reply within 24 hours.</p>
+          <a href="mailto:info@greenwavestaff.com">info@greenwavestaff.com</a>
+        </div>
+      </div>
+      <div class="quick-card fade-up delay-2">
+        <div class="quick-card-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="quick-card-body">
+          <h4>WhatsApp Chat</h4>
+          <p>Prefer to message? Chat with us instantly on WhatsApp.</p>
+          <a href="https://wa.me/14043017997">Start a Chat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section">
+    <div class="map-inner fade-up">
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.3469!2d-84.3204!3d34.0154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a00000000001%3A0x0!2s8735+Dunwoody+Pl+%23R%2C+Atlanta%2C+GA+30350!5e0!3m2!1sen!2sus!4v1700000000000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Greenwave Staffing HQ - Atlanta">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+
+      <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom:14px">
+                    <h4>GREENWAVE STAFFING INC</h4>
+                </div>
+                <p>
+                    Greenwave Staffing Corporation provides expert global and domestic staffing solutions for your
+                    organization.
+                    We specialize in connecting businesses with highly skilled, pre-screened professionals across
+                    multiple
+                    industries and job roles. Our strategic hiring approach ensures that companies gain access to top
+                    talent while
+                    reducing time-to-hire and recruitment costs.
+                </p>
+                <!-- Social Icons (NOT REMOVED) -->
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="#careers"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                    <li><a href="#blogs"><i class="fas fa-chevron-right"></i> Blogs</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            <!-- Services -->
+            <div class="footer-col">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i>Staffing Augmentation</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i>Direct Hire Staffing</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i>Contract-to-Hire Staffing</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i>Contract Staffing</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i>Offshore Staffing</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i>Recruitment Process Outsourcing</a></li>
+                </ul>
+            </div>
+            <!-- New Get In Touch Column -->
+            <div class="footer-col footer-contact">
+                <h5>Get In Touch</h5>
+                <div class="office-block">
+                    <strong>USA Office (Head Quarters):</strong>
+                    <p>8735 Dunwoody Place STE R Atlanta, GA 30350</p>
+                </div>
+                <div class="office-block">
+                    <strong>UK Office</strong>
+                    <p>Brunswick Street, Cheltenham, Gloucester, UK GL504HA</p>
+                </div>
+                <div class="office-block">
+                    <strong>Canada Office:</strong>
+                    <p>Unit 1707, Mississauga, Ontario L5B0A1</p>
+                </div>
+                <div class="office-block">
+                    <strong> Contact</strong>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@greenwavestaff.com">info@greenwavestaff.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+14043017997">404 301-7997</a> ext: 800
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="color:rgba(241, 234, 234, 0.855);font-size:13px">
+                © <span id="year"></span> Greenwave Staffing INC. All rights reserved.
+            </p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+  <!-- FOOTER -->
+ 
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/14043017997" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

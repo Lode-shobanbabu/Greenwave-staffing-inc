@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const TOTAL = 3;
     const AUTO_DELAY = 6000;
-    const TYPE_SPEED = 50;
+    const TYPE_SPEED = 160;
     let current = 0;
     let autoTimer = null;
     let isHovered = false;

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us – Greenwave Staffing LLC</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+    <!-- TOP INFO BAR -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="tel:+1 404 301-7997 ext: 800"><i class="fas fa-phone-alt"></i> Call Us: +1 404 301-7997</a>
+            <a href="mailto:info@greenwavestaff.com"><i class="fas fa-envelope"></i> info@greenwavestaff.com</a>
+        </div>
+        <div class="top-bar-right">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" style="margin:0 6px"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="margin-left:6px"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER -->
+    <!-- HEADER -->
+    <header class="header" id="mainHeader">
+        <div class="logo">
+            <a href="index.html"><img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC"></a>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <div class="nav-dropdown">
+                <a href="#services" class="nav-dropdown-toggle">
+                    Services <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="service-staffing-augmentation.html">Staffing Augmentation </a>
+                    <a href="#recruitment">Direct Hire Staffing</a>
+                    <a href="#consulting">Contract to Hire Staffing</a>
+                    <a href="#payroll">Contract Staffing</a>
+                    <a href="#">Offshore Staffing </a>
+                    <a href="#">Recruitment Process Outsourcing </a>
+                </div>
+            </div>
+
+            <a href="industries.html">Industries</a>
+            <a href="#careers">Careers</a>
+            <a href="#blogs">Blogs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-btns">
+            <button class="btn-teal"><i class="fas fa-briefcase"></i> Hire Talent</button>
+            <button class="btn-outline-nav"><i class="fas fa-search"></i> Find Jobs</button>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo">
+                <a href="index.html"><img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC"></a>
+            </div>
+            <span class="close-menu" onclick="toggleMenu()"><i class="fas fa-times"></i></span>
+        </div>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="about.html" onclick="toggleMenu()">About Us</a>
+        <div class="mobile-dropdown">
+            <input type="checkbox" id="servicesToggle" class="dropdown-toggle-input">
+            <label for="servicesToggle" class="mobile-dropdown-toggle">
+                Services <i class="fas fa-chevron-down"></i>
+            </label>
+            <div class="mobile-dropdown-menu">
+                <a href="service-staffing-augmentation.html" onclick="toggleMenu()">Staffing Augmentation</a>
+                <a href="#" onclick="toggleMenu()">Direct Hire Staffing</a>
+                <a href="#" onclick="toggleMenu()">Contract to Hire Staffing</a>
+                <a href="#" onclick="toggleMenu()">Contract Staffing</a>
+                <a href="#" onclick="toggleMenu()">Offshore Staffing </a>
+                <a href="#" onclick="toggleMenu()">Recruitment Process Outsourcing</a>
+            </div>
+        </div>
+        <a href="industries.html" onclick="toggleMenu()">Industries</a>
+        <a href="#careers" onclick="toggleMenu()">Careers</a>
+        <a href="#blogs" onclick="toggleMenu()">Blogs</a>
+        <a href="contact.html" onclick="toggleMenu()">Contact</a>
+        <div class="mobile-btns">
+            <button class="btn-teal" style="justify-content:center"><i class="fas fa-briefcase"></i> Hire
+                Talent</button>
+            <button class="btn-outline-nav" style="justify-content:center"><i class="fas fa-search"></i> Find
+                Jobs</button>
+        </div>
+    </div>
+
+    <!-- CONSULTATION SIDE TAB -->
+    <div class="consultation-tab" onclick="openConsultForm()">
+        <span><i class="fas fa-calendar-check"></i> Free Consultation</span>
+    </div>
+
+
+    <!-- industries section code start -->
+
+
+    <section class="page-hero">
+  <div class="iph-orb iph-orb--l"></div>
+  <div class="iph-orb iph-orb--r"></div>
+  <div style="position:relative;z-index:2;">
+    <span class="page-hero-tag"><i class="fas fa-layer-group"></i> &nbsp;Industries We Serve</span>
+    <h1>Workforce Solutions for <span>Every Sector</span></h1>
+    <p class="iph-sub">Deep industry expertise. Pre-screened talent. Delivered fast.</p>
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      Industries
+    </nav>
+  </div>
+</section>
+ 
+<!-- INTRO STATS BAR -->
+
+ 
+<!-- INDUSTRIES GRID -->
+<section class="ipg-section">
+  <div class="ipg-inner">
+ 
+    <!-- Header -->
+    <div class="ipg-header fade-up">
+      <span class="section-tag">Our Expertise</span>
+      <h2>Sectors We <span style="color:var(--teal);">Specialize In</span></h2>
+      <p>Every industry has unique workforce demands. Our sector-focused recruiters bring the knowledge and network to find the right fit — every time.</p>
+    </div>
+ 
+    <!-- Cards -->
+    <div class="ipg-grid">
+ 
+      <!-- Healthcare -->
+      <div class="ipc fade-up delay-1">
+        <div class="ipc-top">
+          <div class="ipc-icon-wrap">
+            <div class="ipc-icon"><i class="fas fa-heartbeat"></i></div>
+          </div>
+          <div class="ipc-num">01</div>
+        </div>
+        <h3 class="ipc-title">Healthcare</h3>
+        <p class="ipc-desc">Connecting clinical, administrative, and support professionals with healthcare organizations that meet compliance and regulatory standards.</p>
+        <ul class="ipc-roles">
+          <li>Registered Nurses &amp; CNAs</li>
+          <li>Medical Coders &amp; Billers</li>
+          <li>Healthcare Administrators</li>
+          <li>Allied Health Professionals</li>
+        </ul>
+        <div class="ipc-footer">
+          <a href="contact.html" class="ipc-link">Hire Healthcare Talent <i class="fas fa-arrow-right"></i></a>
+          <div class="ipc-badge">Clinical</div>
+        </div>
+      </div>
+ 
+      <!-- Manufacturing -->
+      <div class="ipc fade-up delay-2">
+        <div class="ipc-top">
+          <div class="ipc-icon-wrap">
+            <div class="ipc-icon"><i class="fas fa-industry"></i></div>
+          </div>
+          <div class="ipc-num">02</div>
+        </div>
+        <h3 class="ipc-title">Manufacturing</h3>
+        <p class="ipc-desc">Supplying skilled operators, technicians, and plant managers to keep production lines running at peak efficiency with minimal downtime.</p>
+        <ul class="ipc-roles">
+          <li>Production Operators</li>
+          <li>Quality Control Inspectors</li>
+          <li>Plant &amp; Shift Managers</li>
+          <li>Maintenance Technicians</li>
+        </ul>
+        <div class="ipc-footer">
+          <a href="contact.html" class="ipc-link">Hire Manufacturing Talent <i class="fas fa-arrow-right"></i></a>
+          <div class="ipc-badge">Industrial</div>
+        </div>
+      </div>
+ 
+      <!-- Logistics -->
+      <div class="ipc fade-up delay-3">
+        <div class="ipc-top">
+          <div class="ipc-icon-wrap">
+            <div class="ipc-icon"><i class="fas fa-truck"></i></div>
+          </div>
+          <div class="ipc-num">03</div>
+        </div>
+        <h3 class="ipc-title">Logistics &amp; Supply Chain</h3>
+        <p class="ipc-desc">From warehouse floor to fleet management, we source logistics professionals who keep your supply chain moving efficiently and on schedule.</p>
+        <ul class="ipc-roles">
+          <li>Warehouse Associates</li>
+          <li>Supply Chain Analysts</li>
+          <li>Fleet &amp; Transport Managers</li>
+          <li>Inventory Specialists</li>
+        </ul>
+        <div class="ipc-footer">
+          <a href="contact.html" class="ipc-link">Hire Logistics Talent <i class="fas fa-arrow-right"></i></a>
+          <div class="ipc-badge">Operations</div>
+        </div>
+      </div>
+ 
+      <!-- Retail -->
+      <div class="ipc fade-up delay-1">
+        <div class="ipc-top">
+          <div class="ipc-icon-wrap">
+            <div class="ipc-icon"><i class="fas fa-store"></i></div>
+          </div>
+          <div class="ipc-num">04</div>
+        </div>
+        <h3 class="ipc-title">Retail</h3>
+        <p class="ipc-desc">Helping retail brands build customer-focused teams for seasonal peaks or permanent roles that drive sales and elevate the shopping experience.</p>
+        <ul class="ipc-roles">
+          <li>Store Associates &amp; Supervisors</li>
+          <li>Visual Merchandisers</li>
+          <li>Loss Prevention Officers</li>
+          <li>E-Commerce Coordinators</li>
+        </ul>
+        <div class="ipc-footer">
+          <a href="contact.html" class="ipc-link">Hire Retail Talent <i class="fas fa-arrow-right"></i></a>
+          <div class="ipc-badge">Consumer</div>
+        </div>
+      </div>
+ 
+      <!-- Finance -->
+      <div class="ipc fade-up delay-2">
+        <div class="ipc-top">
+          <div class="ipc-icon-wrap">
+            <div class="ipc-icon"><i class="fas fa-chart-line"></i></div>
+          </div>
+          <div class="ipc-num">05</div>
+        </div>
+        <h3 class="ipc-title">Finance &amp; Banking</h3>
+        <p class="ipc-desc">Placing finance professionals who bring precision, compliance expertise, and strategic thinking to banks, credit unions, and financial services firms.</p>
+        <ul class="ipc-roles">
+          <li>Financial Analysts</li>
+          <li>Loan Officers &amp; Underwriters</li>
+          <li>Compliance Officers</li>
+          <li>Accounting &amp; Audit Staff</li>
+        </ul>
+        <div class="ipc-footer">
+          <a href="contact.html" class="ipc-link">Hire Finance Talent <i class="fas fa-arrow-right"></i></a>
+          <div class="ipc-badge">Financial</div>
+        </div>
+      </div>
+ 
+      <!-- Hospitality -->
+      <div class="ipc fade-up delay-3">
+        <div class="ipc-top">
+          <div class="ipc-icon-wrap">
+            <div class="ipc-icon"><i class="fas fa-concierge-bell"></i></div>
+          </div>
+          <div class="ipc-num">06</div>
+        </div>
+        <h3 class="ipc-title">Hospitality</h3>
+        <p class="ipc-desc">Staffing hotels, restaurants, and event venues with service-oriented professionals who deliver exceptional guest experiences every day.</p>
+        <ul class="ipc-roles">
+          <li>Hotel &amp; Front Desk Staff</li>
+          <li>Food &amp; Beverage Managers</li>
+          <li>Event Coordinators</li>
+          <li>Housekeeping Supervisors</li>
+        </ul>
+        <div class="ipc-footer">
+          <a href="contact.html" class="ipc-link">Hire Hospitality Talent <i class="fas fa-arrow-right"></i></a>
+          <div class="ipc-badge">Service</div>
+        </div>
+      </div>
+ 
+      <!-- Engineering — wide card -->
+
+ 
+    </div><!-- /.ipg-grid -->
+  </div>
+</section>
+ 
+<!-- PROCESS SECTION -->
+<section class="ipp-section">
+  <div class="ipp-inner">
+    <div class="ipp-header fade-up">
+      <span class="section-tag">How It Works</span>
+      <h2>Our <span style="color:var(--teal);">4-Step</span> Hiring Process</h2>
+      <p>We don't just fill seats — we match the right talent to the right sector using a proven methodology.</p>
+    </div>
+    <div class="ipp-steps">
+      <div class="ipp-step fade-up delay-1">
+        <div class="ipp-step-line"></div>
+        <div class="ipp-step-dot"><span>01</span></div>
+        <div class="ipp-step-icon"><i class="fas fa-search"></i></div>
+        <h4>Understand Your Sector</h4>
+        <p>We deep-dive into your industry's compliance needs, skill gaps, and culture before sourcing a single candidate.</p>
+      </div>
+      <div class="ipp-step fade-up delay-2">
+        <div class="ipp-step-line"></div>
+        <div class="ipp-step-dot"><span>02</span></div>
+        <div class="ipp-step-icon"><i class="fas fa-filter"></i></div>
+        <h4>Source &amp; Screen</h4>
+        <p>Sector-specific recruiters run rigorous screening — background checks, skills assessments, and credential verification.</p>
+      </div>
+      <div class="ipp-step fade-up delay-3">
+        <div class="ipp-step-line"></div>
+        <div class="ipp-step-dot"><span>03</span></div>
+        <div class="ipp-step-icon"><i class="fas fa-user-check"></i></div>
+        <h4>Present Top Matches</h4>
+        <p>You receive a curated shortlist of pre-vetted candidates ready for interviews within 48 hours.</p>
+      </div>
+      <div class="ipp-step fade-up delay-4">
+        <div class="ipp-step-line ipp-step-line--last"></div>
+        <div class="ipp-step-dot"><span>04</span></div>
+        <div class="ipp-step-icon"><i class="fas fa-handshake"></i></div>
+        <h4>Onboard &amp; Support</h4>
+        <p>We handle onboarding logistics and stay connected post-placement to ensure long-term success.</p>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom:14px">
+                    <h4>GREENWAVE STAFFING INC</h4>
+                </div>
+                <p>
+                    Greenwave Staffing Corporation provides expert global and domestic staffing solutions for your
+                    organization.
+                    We specialize in connecting businesses with highly skilled, pre-screened professionals across
+                    multiple
+                    industries and job roles. Our strategic hiring approach ensures that companies gain access to top
+                    talent while
+                    reducing time-to-hire and recruitment costs.
+                </p>
+                <!-- Social Icons (NOT REMOVED) -->
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="#careers"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                    <li><a href="#blogs"><i class="fas fa-chevron-right"></i> Blogs</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            <!-- Services -->
+            <div class="footer-col">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i>Staffing Augmentation</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i>Direct Hire Staffing</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i>Contract-to-Hire Staffing</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i>Contract Staffing</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i>Offshore Staffing</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i>Recruitment Process Outsourcing</a></li>
+                </ul>
+            </div>
+            <!-- New Get In Touch Column -->
+            <div class="footer-col footer-contact">
+                <h5>Get In Touch</h5>
+                <div class="office-block">
+                    <strong>USA Office (Head Quarters):</strong>
+                    <p>8735 Dunwoody Place STE R Atlanta, GA 30350</p>
+                </div>
+                <div class="office-block">
+                    <strong>UK Office</strong>
+                    <p>Brunswick Street, Cheltenham, Gloucester, UK GL504HA</p>
+                </div>
+                <div class="office-block">
+                    <strong>Canada Office:</strong>
+                    <p>Unit 1707, Mississauga, Ontario L5B0A1</p>
+                </div>
+                <div class="office-block">
+                    <strong> Contact</strong>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@greenwavestaff.com">info@greenwavestaff.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+14043017997">404 301-7997</a> ext: 800
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="color:rgba(241, 234, 234, 0.855);font-size:13px">
+                © <span id="year"></span> Greenwave Staffing INC. All rights reserved.
+            </p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/9123456789" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- CONSULTATION PANEL (copy from index.html) -->
+    <div class="consult-overlay" id="consultOverlay" onclick="handleOverlayClick(event)">
+        <div class="consult-panel" id="consultPanel">
+            <button class="consult-close" onclick="closeConsultForm()"><i class="fas fa-times"></i></button>
+            <div class="consult-header">
+                <div class="consult-icon"><i class="fas fa-calendar-check"></i></div>
+                <h2>Free Consultation</h2>
+                <p>Tell us your needs and we'll connect you with the right talent — fast.</p>
+            </div>
+            <div class="consult-body">
+                <div class="consult-field"><label>Full Name</label><input type="text" placeholder="John Smith"></div>
+                <div class="consult-field"><label>Email Address</label><input type="email"
+                        placeholder="john@company.com"></div>
+                <div class="consult-field"><label>Phone Number</label><input type="tel" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="consult-field"><label>Company Name</label><input type="text" placeholder="Your Company">
+                </div>
+                <div class="consult-field">
+                    <label>What are you looking for?</label>
+                    <select>
+                        <option value="">Select an option</option>
+                        <option>Hire Talent / Staff</option>
+                        <option>Find a Job</option>
+                        <option>Workforce Consulting</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="consult-field"><label>Message (Optional)</label><textarea placeholder="Tell us more..."
+                        rows="3"></textarea></div>
+                <button class="consult-submit"><i class="fas fa-paper-plane"></i> Book My Free Consultation</button>
+                <p class="consult-note"><i class="fas fa-lock"></i> Your info is 100% secure and never shared.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+(function () {
+  /* Staggered fade-up for industry cards */
+  const cards = document.querySelectorAll('.ind-page-card');
+  cards.forEach(function (card, i) {
+    const delay = parseInt(card.getAttribute('data-delay') || 0, 10);
+    card.style.transitionDelay = delay + 'ms';
+  });
+ 
+  /* Intersection Observer for fade-up animations */
+  const fadeEls = document.querySelectorAll('.fade-up');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    fadeEls.forEach(function (el) { obs.observe(el); });
+  } else {
+    fadeEls.forEach(function (el) { el.classList.add('visible'); });
+  }
+})();
+</script>
+
+    <!-- JS: reuse your main.js + page-specific -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
