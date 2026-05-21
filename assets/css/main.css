@@ -5120,7 +5120,7 @@ img {
  
 /* ── GRID SECTION ── */
 .ipg-section {
-  padding: 80px 5% 90px;
+  padding: 50px 5% 50px;
   background: var(--gray-light);
 }
 .ipg-inner { max-width: 1280px; margin: 0 auto; }
@@ -5356,7 +5356,7 @@ img {
  
 /* ── PROCESS SECTION ── */
 .ipp-section {
-  padding: 80px 5%;
+  padding: 50px 5%;
   background: var(--white);
 }
 .ipp-inner { max-width: 1280px; margin: 0 auto; }
