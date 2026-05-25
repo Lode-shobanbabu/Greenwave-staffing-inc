@@ -457,344 +457,326 @@ img {
 /* HERO */
 /* ── SLIDER WRAPPER ───────────────────────────────────── */
 /* ── HERO SLIDE BACKGROUNDS ───────────────────────────── */
-.hs-slide--1 {
-  background-image: url('../img/images/hero-slider-one.webp');
-  background-size: cover;
-  background-position: center center;
-}
+ /* ── HERO WRAPPER ── */
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
 
-.hs-slide--2 {
-  background-image: url('../img/images/hero-slider-two.webp');
-  background-size: cover;
-  background-position: center center;
-}
+        /* ── TRACK ── */
+        .hs-track {
+            display: flex;
+            height: 100%;
+            width: 300%;
+            transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+        }
 
-.hs-slide--3 {
-  background-image: url('../img/images/hero-slider-three.webp');
-  background-size: cover;
-  background-position: center center;
-}
+        /* ── SLIDE ── */
+        .hs-slide {
+            width: calc(100% / 3);
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            flex-shrink: 0;
+        }
 
-.hero-slider {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
-}
+        .hs-slide--1 {
+            background-image: url('../img/images/hero-slider-one.webp');
+        }
 
-/* ── TRACK ────────────────────────────────────────────── */
-.hs-track {
-  display: flex;
-  height: 100%;
-  width: 300%;
-  transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-}
+        .hs-slide--2 {
+            background-image: url('../img/images/hero-slider-two.webp');
+        }
 
-/* ── SINGLE SLIDE ─────────────────────────────────────── */
-.hs-slide {
-  width: calc(100% / 3);
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  flex-shrink: 0;
-}
+        .hs-slide--3 {
+            background-image: url('../img/images/hero-slider-three.webp');
+        }
 
-.hs-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(10, 25, 41, 0.60);
-}
+        .hs-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 25, 41, 0.60);
+        }
 
-/* ── INNER CONTAINER ──────────────────────────────────── */
-/*
-   Key fix: use padding-left + padding-right of 8%
-   This gives the same inset as your reference design on both sides.
-   The content block itself is capped at 520px so it never
-   stretches full width.
+        /* ── CONTAINER ── */
+        .hs-container {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 8%;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        /* ── CONTENT ── */
+        .hs-content {
+            width: 100%;
+            max-width: 560px;
+            color: #fff;
+        }
+
+        .hs-content--left {
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .hs-content--center {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hs-content--right {
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .hs-content--center .hs-desc {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hs-content--right .hs-desc {
+            margin-left: auto;
+        }
+
+        /* ── BADGE ── */
+        .hs-badge {
+            display: inline-block;
+            border: 2px solid #03BFC8;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 7px 22px;
+            border-radius: 4px;
+            margin-bottom: 18px;
+            background: transparent;
+        }
+
+        /* ── TITLE — each line clips so letters enter from above cleanly ── */
+        .hs-title {
+            font-size: 42px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .hs-title span {
+            color: #fff;
+        }
+
+        /*
+  Each line is wrapped in a .hs-line div with overflow:hidden
+  so letters dropping in are clipped above — they only appear
+  once they cross into the visible line area.
 */
-.hs-container {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 8%;
-  /* ← equal left & right breathing room */
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-}
+        .hs-line {
+            display: block;
+            overflow: hidden;
+            /* clips letters coming from above */
+            padding-bottom: 4px;
+            /* avoid clipping descenders */
+        }
 
-/* ── CONTENT BLOCK ────────────────────────────────────── */
-.hs-content {
-  width: 100%;
-  max-width: 520px;
-  /* keeps text block from going too wide */
-  color: #fff;
-}
-
-/* LEFT  — Slide 1 */
-.hs-content--left {
-  margin-right: auto;
-  text-align: left;
-}
-
-/* CENTER — Slide 2 */
-.hs-content--center {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.hs-content--center .hs-desc {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* RIGHT — Slide 3
-   margin-left:auto pushes the block to the right edge of .hs-container
-   padding-right:8% on .hs-container keeps it off the screen edge  */
-.hs-content--right {
-  margin-left: auto;
-  text-align: right;
-}
-
-.hs-content--right .hs-desc {
-  margin-left: auto;
-}
-
-/* ── BADGE ────────────────────────────────────────────── */
-.hs-badge {
+        /* ── LETTER SPANS ── */
+        /* .hs-char {
   display: inline-block;
-  border: 2px solid #03BFC8;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 7px 22px;
-  border-radius: 4px;
-  margin-bottom: 18px;
-  letter-spacing: 0.3px;
-  background: transparent;
-}
+  opacity: 1;                                        
+  transform: translateY(-1.4em) rotate(-90deg) scale(0.5);
+  transform-origin: center center;
+  transition: none;
+} */
 
-/* ── TITLE ────────────────────────────────────────────── */
-.hs-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 40px;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1.25;
-  margin-bottom: 18px;
-  letter-spacing: 4.2px;
-}
+        .hs-char {
+            display: inline-block;
+            opacity: 0;
+            /* transform: translateY(-1.4em) rotate(-90deg) scale(0.5); */
+            transform: translateY(-220px) rotate(-90deg) scale(0.3);
+            transform-origin: center center;
+            will-change: transform, opacity;
+        }
 
-.hs-title span {
-  color: #fff;
-}
+        /* ── DESC ── */
+        .hs-desc {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
 
-/* ── DESCRIPTION ──────────────────────────────────────── */
-.hs-desc {
-  font-size: 22px;
-  color: rgba(255, 255, 255, 0.82);
-  line-height: 1.5;
-  margin-bottom: 32px;
-}
+        /* ── BUTTON ── */
+        .hs-btn {
+            display: inline-block;
+            background: #03BFC8;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            padding: 14px 38px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.25s, transform 0.15s, box-shadow 0.2s;
+            box-shadow: 0 4px 18px rgba(3, 191, 200, 0.4);
+        }
 
-/* ── BUTTON ───────────────────────────────────────────── */
-.hs-btn {
-  display: inline-block;
-  background: #03BFC8;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  padding: 14px 38px;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background 0.25s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 4px 18px rgba(3, 191, 200, 0.4);
-}
+        .hs-btn:hover {
+            background: #0894F3;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(3, 191, 200, 0.5);
+            color: #fff;
+            text-decoration: none;
+        }
 
-.hs-btn:hover {
-  background: #0894F3;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(3, 191, 200, 0.5);
-  color: #fff;
-  text-decoration: none;
-}
+        /* ── ARROWS ── */
+        .hs-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.42);
+            backdrop-filter: blur(4px);
+            transition: background 0.25s, transform 0.2s;
+        }
 
-/* ── ARROWS ───────────────────────────────────────────── */
-.hs-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 20;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.42);
-  backdrop-filter: blur(4px);
-  transition: background 0.25s, transform 0.2s;
-}
+        .hs-arrow:hover {
+            background: #03BFC8;
+            transform: translateY(-50%) scale(1.08);
+        }
 
-.hs-arrow:hover {
-  background: #03BFC8;
-  transform: translateY(-50%) scale(1.08);
-}
+        .hs-prev {
+            left: 20px;
+        }
 
-.hs-prev {
-  left: 20px;
-}
+        .hs-next {
+            right: 20px;
+        }
 
-.hs-next {
-  right: 20px;
-}
+        /* ── DOTS ── */
+        .hs-dots {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+        }
 
-/* ── DOTS ─────────────────────────────────────────────── */
-.hs-dots {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 20;
-}
+        .hs-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.55);
+            background: transparent;
+            cursor: pointer;
+            padding: 0;
+            transition: background 0.25s, width 0.3s, border-color 0.25s;
+        }
 
-.hs-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.55);
-  background: transparent;
-  cursor: pointer;
-  padding: 0;
-  transition: background 0.25s, width 0.3s, border-color 0.25s;
-}
+        .hs-dot.active {
+            background: #03BFC8;
+            border-color: #03BFC8;
+            width: 30px;
+            border-radius: 5px;
+        }
 
-.hs-dot.active {
-  background: #03BFC8;
-  border-color: #03BFC8;
-  width: 30px;
-  border-radius: 5px;
-}
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .hero-slider {
+                height: 560px;
+            }
 
-/* ── RESPONSIVE ───────────────────────────────────────── */
-/* Tablet */
-@media (max-width: 1024px) {
-  .hero-slider {
-    height: 560px;
-  }
+            .hs-container {
+                padding: 0 6%;
+            }
 
-  .hs-container {
-    padding: 0 6%;
-  }
+            .hs-content {
+                max-width: 480px;
+            }
+        }
 
-  .hs-content {
-    max-width: 480px;
-  }
-}
+        @media (max-width: 768px) {
+            .hero-slider {
+                height: 500px;
+            }
 
-@media (max-width: 768px) {
-  .hero-slider {
-    height: 500px;
-  }
+            .hs-arrow {
+                display: none;
+            }
 
-  .hs-container {
-    padding: 0 6%;
-  }
+            .hs-content {
+                max-width: 100%;
+            }
 
-  .hs-content {
-    max-width: 100%;
-  }
+            .hs-content--center,
+            .hs-content--right {
+                margin-left: 0;
+                margin-right: auto;
+                text-align: left;
+            }
 
-  /* Hide arrows — dots only on mobile */
-  .hs-arrow {
-    display: none;
-  }
+            .hs-content--center .hs-desc,
+            .hs-content--right .hs-desc {
+                margin-left: 0;
+                margin-right: 0;
+            }
 
-  /* Force left-align all slides on mobile */
-  .hs-content--center,
-  .hs-content--right {
-    margin-left: 0;
-    margin-right: auto;
-    text-align: left;
-  }
+            .hs-title {
+                font-size: 1.8rem;
+            }
 
-  .hs-content--center .hs-desc,
-  .hs-content--right .hs-desc {
-    margin-left: 0;
-    margin-right: 0;
-  }
+            .hs-desc {
+                font-size: 0.95rem;
+                margin-bottom: 24px;
+            }
 
-  .hs-title {
-    font-size: 1.75rem;
-  }
+            .hs-btn {
+                padding: 12px 28px;
+                font-size: 12px;
+                letter-spacing: 1.4px;
+            }
 
-  .hs-desc {
-    font-size: 0.93rem;
-    margin-bottom: 24px;
-  }
+            .hs-badge {
+                font-size: 12px;
+                padding: 5px 14px;
+            }
+        }
 
-  .hs-btn {
-    padding: 12px 28px;
-    font-size: 12px;
-    letter-spacing: 1.4px;
-  }
+        @media (max-width: 480px) {
+            .hero-slider {
+                height: 460px;
+            }
 
-  .hs-badge {
-    font-size: 12px;
-    padding: 5px 14px;
-  }
-}
+            .hs-container {
+                padding: 0 5%;
+            }
 
-@media (max-width: 480px) {
-  .hero-slider {
-    height: 460px;
-  }
+            .hs-title {
+                font-size: 1.5rem;
+            }
 
-  .hs-container {
-    padding: 0 5%;
-  }
-
-  .hs-title {
-    font-size: 1.5rem;
-  }
-}
-
-.hs-title {
-  animation: none !important;
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-/* Hero slider typewriter letter spans */
-.hs-char {
-  display: inline-block;
-  opacity: 0;
-  transition: opacity 0.83s ease;
-}
-
-.hs-char--teal {
-  color: #fff;
-}
-
-/* Prevent layout shift — keep h1 min-height while typing */
-.hs-title {
-  min-height: 1.15em;
-}
+        }
 
 /* CONSULTATION SIDE TAB */
 .consultation-tab {
@@ -5642,4 +5624,43 @@ img {
   .ipp-steps {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+/* pagination code for industries page  */
+
+/* PAGINATION */
+.pagination{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-top:50px;
+    flex-wrap:wrap;
+}
+
+.pagination button{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:10px;
+    background:#f1f5f9;
+    color:#111;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s ease;
+    font-family:'Poppins',sans-serif;
+}
+
+.pagination button:hover{
+    background:var(--teal);
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.pagination button.active{
+    background:var(--teal);
+    color:#fff;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
 }

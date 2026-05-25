@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staffing Augmentation – Greenwave Staffing Inc</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <!-- TOP INFO BAR -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="tel:+1 404 301-7997 ext: 800"><i class="fas fa-phone-alt"></i> Call Us: +1 404 301-7997</a>
+      <a href="mailto:info@greenwavestaff.com"><i class="fas fa-envelope"></i> info@greenwavestaff.com</a>
+    </div>
+    <div class="top-bar-right">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" style="margin:0 6px"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="margin-left:6px"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- HEADER -->
+  <!-- HEADER -->
+  <header class="header" id="mainHeader">
+    <div class="logo">
+      <a href="index.html"><img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC"></a>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <div class="nav-dropdown">
+        <a href="#services" class="nav-dropdown-toggle">
+          Offering <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="service-staffing-augmentation.html">Staffing Augmentation </a>
+          <a href="service-direct-hiring-staffing.html">Direct Hire Staffing</a>
+          <a href="service-contrat-to-hire-staffing.html">Contract to Hire Staffing</a>
+          <a href="service-contract-staffing.html">Contract Staffing</a>
+          <a href="service-offshoring.html">Offshore Staffing </a>
+          <a href="service-recruitment-outsourcing.html">Recruitment Process Outsourcing </a>
+        </div>
+      </div>
+
+      <a href="industries.html">Industries</a>
+      <a href="#careers">Careers</a>
+      <a href="#blogs">Blogs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-btns">
+      <button class="btn-teal"><i class="fas fa-briefcase"></i> Hire Talent</button>
+      <button class="btn-outline-nav"><i class="fas fa-search"></i> Find Jobs</button>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+  <!-- MOBILE MENU -->
+  <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <a href="index.html"><img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC"></a>
+      </div>
+      <span class="close-menu" onclick="toggleMenu()"><i class="fas fa-times"></i></span>
+    </div>
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <a href="about.html" onclick="toggleMenu()">About Us</a>
+    <div class="mobile-dropdown">
+      <input type="checkbox" id="servicesToggle" class="dropdown-toggle-input">
+      <label for="servicesToggle" class="mobile-dropdown-toggle">
+        Services <i class="fas fa-chevron-down"></i>
+      </label>
+      <div class="mobile-dropdown-menu">
+        <a href="service-staffing-augmentation.html" onclick="toggleMenu()">Staffing Augmentation</a>
+        <a href="#" onclick="toggleMenu()">Direct Hire Staffing</a>
+        <a href="#" onclick="toggleMenu()">Contract to Hire Staffing</a>
+        <a href="#" onclick="toggleMenu()">Contract Staffing</a>
+        <a href="#" onclick="toggleMenu()">Offshore Staffing </a>
+        <a href="#" onclick="toggleMenu()">Recruitment Process Outsourcing</a>
+      </div>
+    </div>
+    <a href="industries.html" onclick="toggleMenu()">Industries</a>
+    <a href="#careers" onclick="toggleMenu()">Careers</a>
+    <a href="#blogs" onclick="toggleMenu()">Blogs</a>
+    <a href="contact.html" onclick="toggleMenu()">Contact</a>
+    <div class="mobile-btns">
+      <button class="btn-teal" style="justify-content:center"><i class="fas fa-briefcase"></i> Hire
+        Talent</button>
+      <button class="btn-outline-nav" style="justify-content:center"><i class="fas fa-search"></i> Find
+        Jobs</button>
+    </div>
+  </div>
+  <!-- CONSULTATION SIDE TAB -->
+  <div class="consultation-tab" onclick="openConsultForm()">
+    <span><i class="fas fa-calendar-check"></i> Free Consultation</span>
+  </div>
+  <!-- ══════════════════════════════════════════════
+       PASTE YOUR HEADER CODE HERE
+  ══════════════════════════════════════════════ -->
+  <!-- PAGE HERO — change title per service page -->
+  <section class="page-hero">
+    <div class="page-hero-tag">Our Services</div>
+    <h1>Contract to <span> Hire Staffing </span></h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+
+      <!-- <a href="#services">Services</a> -->
+      <span>/</span>
+      Contract to Hire Staffing
+    </div>
+  </section>
+  <!-- ══════════════════════════════════════════════
+       SERVICE DETAILS SECTION
+  ══════════════════════════════════════════════ -->
+  <section class="sd-section">
+    <div class="sd-container">
+      <!-- ────────────────────────────────────────
+           LEFT: MAIN CONTENT
+      ──────────────────────────────────────── -->
+      <div class="sd-content">
+        <h2>What Is Contract-to-Hire Staffing ?</h2>
+        <p>
+          Contract-to-Hire is a strategic recruitment model where a candidate works on a contract basis for a trial
+          period with the specific intent of potentially becoming a permanent employee. During this phase, the
+          professional remains on Greenwave Staffing's Inc payroll while performing as a full member of your team16.
+          This model is ideal for organizations that want to eliminate hiring mistakes and ensure a perfect long-term
+          fit1more_horiz.
+        </p>
+        <!-- Image + Checklist row -->
+        <div class="sd-img-list-row">
+          <img src="assets/img/images/aboutsectionimage.webp" alt="Staffing Augmentation">
+          <div>
+            <h3>Comprehensive Talent Solutions Across Key Departments</h3>
+            <ul class="sd-check-list">
+              <li><i class="fas fa-circle-check"></i> IT Professionals: Evaluate expert Developers, Architects, AI
+                Engineers, AI Developers, Machine Learning, Data Scientist, Data Analysts in a real-world environment.
+              </li>
+              <li><i class="fas fa-circle-check"></i>Non-IT Roles: Secure permanent talent for administration,
+                operations, finance, and HR .</li>
+
+
+              <li><i class="fas fa-circle-check"></i>Specialized Industries: We provide sector-specific
+                hiring for IT, Healthcare, Manufacturing, Logistics, Finance, Retail, Construction,
+                Civil Engineering, Civil Engineering, Food Products Manufacturing, Pharma, Scientific,
+                Biotechnology, Environmental, Hospitality and across all the industries.
+              </li>
+              <li><i class="fas fa-circle-check"></i> Rapid Deployment : TLeverage our pre-screened talent pool to fill
+                critical trial roles quickly.
+              </li>
+              <!-- <li><i class="fas fa-circle-check"></i> Full compliance, payroll & admin management</li> -->
+            </ul>
+          </div>
+        </div>
+        <!-- Icon Box Grid -->
+        <h2>Our Proven 4-Step Contract-to-Hire Process</h2>
+        <div class="sd-icon-box-grid">
+          <div class="sd-icon-box">
+            <div class="box-icon"><i class="fas fa-magnifying-glass"></i></div>
+            <div class="box-content">
+              <h4>Understand Project Requirements</h4>
+              <p>We begin by deeply analyzing your workforce needs, project scope, and the specific cultural fit
+                required for permanent success.
+              </p>
+            </div>
+          </div>
+          <div class="sd-icon-box">
+            <div class="box-icon"><i class="fas fa-users"></i></div>
+            <div class="box-content">
+              <h4> Source & Screen Talent</h4>
+              <p>Our recruiters tap into a global talent network to rigorously assess and background-check candidates
+                specifically for long-term potential.</p>
+            </div>
+          </div>
+          <div class="sd-icon-box">
+            <div class="box-icon"><i class="fas fa-list-check"></i></div>
+            <div class="box-content">
+              <h4>Curated Shortlist Presentation</h4>
+              <p>We present a curated shortlist of pre-vetted candidates within 48–72 hours, including full profiles and
+                interview notes.</p>
+            </div>
+          </div>
+          <div class="sd-icon-box">
+            <div class="box-icon"><i class="fas fa-rocket"></i></div>
+            <div class="box-content">
+              <h4>Seamless Onboarding & Trial</h4>
+              <p>We handle all paperwork, compliance, and payroll during the contract period so your new professional
+                can focus on delivering results. </p>
+            </div>
+          </div>
+        </div>
+        <!-- Key Features list -->
+        <h2>Why Choose Greenwave Staffing Inc for Contract-to-Hire?</h2>
+        <ul class="sd-check-list">
+          <li><i class="fas fa-circle-check"></i> Reduced Hiring Risk: Fully evaluate a candidate’s performance, work
+            ethic, and cultural alignment before extending a permanent offer.
+          </li>
+          <li><i class="fas fa-circle-check"></i>Faster Time-to-Hire: Receive a qualified shortlist in as little as
+            48–72 hours, reducing your critical time-to-fill.
+          </li>
+          <li><i class="fas fa-circle-check"></i>Zero Administrative Burden: We handle 100% of the payroll processing,
+            tax compliance, and benefits administration during the trial period. </li>
+
+          <li><i class="fas fa-circle-check"></i>Cost-Effective Scalability: Scale your team up without the immediate
+            long-term overhead of permanent hiring. .</li>
+
+          <li><i class="fas fa-circle-check"></i>Smooth Permanent Transition: We provide a clear pathway to move from
+            contract to direct hire at any point during the engagement.
+          </li>
+
+          <li><i class="fas fa-circle-check"></i>High Client Satisfaction: Our commitment to quality has
+            earned us a 98% satisfaction rate and a 95% client retention rate.
+          </li>
+        </ul>
+
+        <!-- FAQ Accordion -->
+        <h2 style="margin-top: 36px;">Frequently Asked Questions</h2>
+        <div class="sd-faq">
+
+          <div class="sd-faq-item open">
+            <button class="sd-faq-question">
+              1.What are the benefits of Contract-to-Hire?
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="sd-faq-answer">
+              <div class="sd-faq-answer-inner">
+                It reduces hiring risk by allowing you to evaluate a candidate’s fit before making a permanent
+                commitment, while we handle all administrative burdens during the trial period.
+              </div>
+            </div>
+          </div>
+
+          <div class="sd-faq-item">
+            <button class="sd-faq-question">
+              2.How long does the trial period usually last?
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="sd-faq-answer">
+              <div class="sd-faq-answer-inner">
+                The duration is flexible and can be tailored to your needs, whether it's a few months or a specific
+                project timeline.
+              </div>
+            </div>
+          </div>
+
+          <div class="sd-faq-item">
+            <button class="sd-faq-question">
+              3. Who handles the payroll and compliance?
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="sd-faq-answer">
+              <div class="sd-faq-answer-inner">
+                Greenwave Staffing Inc handles 100% of the administrative side, including payroll, taxes, and legal
+                requirements, during the contract portion of the engagement.
+              </div>
+            </div>
+          </div>
+          <div class="sd-faq-item">
+            <button class="sd-faq-question">
+              4.When can I hire the candidate permanently?
+              <span class="faq-icon"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="sd-faq-answer">
+              <div class="sd-faq-answer-inner">
+                You can transition an augmented professional to a permanent role at any point during the engagement once
+                you are satisfied with their performance.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end FAQ -->
+      </div>
+      <!-- ── END LEFT CONTENT ── -->
+      <!-- ────────────────────────────────────────
+           RIGHT: SIDEBAR
+      ──────────────────────────────────────── -->
+      <aside class="sd-sidebar">
+        <!-- Services List Widget -->
+        <div class="sd-widget">
+          <div class="sd-widget-title">Our Services</div>
+          <ul class="sd-services-list">
+            <li>
+              <a href="service-staffing-augmentation.html" class="#">
+                Staffing Augmentation
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Direct Hire Staffing
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Contract to Hire Staffing
+              </a>
+            </li>
+            <li>
+              <a href="service-contract-staffing.html" class="active">
+                Contract Staffing
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Offshore Staffing
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Recruitment Process Outsourcing
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Get a Quote Widget -->
+        <!-- GET A QUOTE / CALL WIDGET — replace the second sd-widget in your sidebar -->
+        <div class="sd-widget sd-call-widget">
+          <div class="sd-call-inner">
+            <h3>Need Skilled Talent Today?</h3>
+            <p class="sd-call-label">CALL NOW</p>
+            <a href="tel:+14043017997" class="sd-call-number">
+              <span class="sd-call-icon"><i class="fas fa-phone-alt"></i></span>
+              +1 404 301-7997
+            </a>
+          </div>
+        </div>
+      </aside>
+      <!-- ── END SIDEBAR ── -->
+    </div>
+  </section>
+  <!-- ══════════════════════════════════════════════
+       END SERVICE DETAILS SECTION
+  ══════════════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:14px">
+          <h4>GREENWAVE STAFFING INC</h4>
+        </div>
+        <p>
+          Greenwave Staffing Inc provides expert global staffing solutions for your organization.
+          We specialize in connecting businesses with highly skilled, pre-screened professionals across
+          multiple
+          industries and job roles. Our strategic hiring approach ensures that companies gain access to top
+          talent while
+          reducing time-to-hire and recruitment costs.
+        </p>
+        <!-- Social Icons (NOT REMOVED) -->
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          <li><a href="#careers"><i class="fas fa-chevron-right"></i> Careers</a></li>
+          <li><a href="#blogs"><i class="fas fa-chevron-right"></i> Blogs</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <!-- Services -->
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i>Staffing Augmentation</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i>Direct Hire Staffing</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i>Contract-to-Hire Staffing</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i>Contract Staffing</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i>Offshore Staffing</a></li>
+          <li><a href="#services"><i class="fas fa-chevron-right"></i>Recruitment Process Outsourcing</a></li>
+        </ul>
+      </div>
+      <!-- New Get In Touch Column -->
+      <div class="footer-col footer-contact">
+        <h5>Get In Touch</h5>
+        <div class="office-block">
+          <strong>USA Office (Head Quarters):</strong>
+          <p>525 Randall Ave, Ste 100 PMB 388
+            Cheyenne, WY 82001</p>
+        </div>
+        <div class="office-block">
+          <strong>USA Office (Main Branch):</strong>
+          <p>8735 Dunwoody Place STE R Atlanta, GA 30350</p>
+        </div>
+        <div class="office-block">
+          <strong>UK Office</strong>
+          <p>Brunswick Street, Cheltenham, Gloucester, UK GL504HA</p>
+        </div>
+        <div class="office-block">
+          <strong>Canada Office:</strong>
+          <p>Unit 1707, Mississauga, Ontario L5B0A1</p>
+        </div>
+        <div class="office-block">
+          <strong> Contact</strong>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@greenwavestaff.com">info@greenwavestaff.com</a>
+          </p>
+          <p>
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+14043017997">404 301-7997</a> ext: 800
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p style="color:rgba(241, 234, 234, 0.855);font-size:13px">
+        © <span id="year"></span> Greenwave Staffing INC. All rights reserved.
+      </p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CONSULTATION PANEL (copy from index.html) -->
+  <div class="consult-overlay" id="consultOverlay" onclick="handleOverlayClick(event)">
+    <div class="consult-panel" id="consultPanel">
+      <button class="consult-close" onclick="closeConsultForm()"><i class="fas fa-times"></i></button>
+      <div class="consult-header">
+        <div class="consult-icon"><i class="fas fa-calendar-check"></i></div>
+        <h2>Free Consultation</h2>
+        <p>Tell us your needs and we'll connect you with the right talent — fast.</p>
+      </div>
+      <div class="consult-body">
+        <div class="consult-field"><label>Full Name</label><input type="text" placeholder="John Smith"></div>
+        <div class="consult-field"><label>Email Address</label><input type="email" placeholder="john@company.com"></div>
+        <div class="consult-field"><label>Phone Number</label><input type="tel" placeholder="+1 (555) 000-0000">
+        </div>
+        <div class="consult-field"><label>Company Name</label><input type="text" placeholder="Your Company">
+        </div>
+        <div class="consult-field">
+          <label>What are you looking for?</label>
+          <select>
+            <option value="">Select an option</option>
+            <option>Hire Talent / Staff</option>
+            <option>Find a Job</option>
+            <option>Workforce Consulting</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="consult-field"><label>Message (Optional)</label><textarea placeholder="Tell us more..."
+            rows="3"></textarea></div>
+        <button class="consult-submit"><i class="fas fa-paper-plane"></i> Book My Free Consultation</button>
+        <p class="consult-note"><i class="fas fa-lock"></i> Your info is 100% secure and never shared.</p>
+      </div>
+    </div>
+  </div>
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/14043017997" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
