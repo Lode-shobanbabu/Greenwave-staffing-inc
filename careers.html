@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers – Greenwave Staffing LLC</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Careers-specific styles go in main.css (see careers.css deliverable) -->
+</head>
+
+<body>
+
+    <div class="consultation-tab" onclick="openConsultForm()">
+        <span><i class="fas fa-calendar-check"></i> Free Consultation</span>
+    </div>
+
+    <!-- TOP INFO BAR -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="tel:+1 404 301-7997 ext: 800"><i class="fas fa-phone-alt"></i> Call Us: +1 404 301-7997</a>
+            <a href="mailto:info@greenwavestaff.com"><i class="fas fa-envelope"></i> info@greenwavestaff.com</a>
+        </div>
+        <div class="top-bar-right">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" style="margin:0 6px"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="margin-left:6px"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+   <!-- HEADER -->
+  <header class="header" id="mainHeader">
+    <div class="logo">
+      <a href="index.html"><img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC"></a>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <div class="nav-dropdown">
+        <a href="#services" class="nav-dropdown-toggle">
+          Offering <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="service-staffing-augmentation.html">Staffing Augmentation </a>
+          <a href="service-direct-hiring-staffing.html">Direct Hire Staffing</a>
+          <a href="service-contrat-to-hire-staffing.html">Contract to Hire Staffing</a>
+          <a href="service-contract-staffing.html">Contract Staffing</a>
+          <a href="service-offshoring.html">Offshore Staffing </a>
+          <a href="service-recruitment-outsourcing.html">Recruitment Process Outsourcing </a>
+        </div>
+      </div>
+
+      <a href="industries.html">Industries</a>
+      <a href="careers.html">Careers</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-btns">
+     <a href="careers.html"><button class="btn-teal"><i class="fas fa-briefcase"></i> Find Jobs</button></a>
+      <a href="contact.html"><button class="btn-teal"><i class="fas fa-briefcase"></i> Get In Touch</button></a>
+      
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC">
+      </div>
+      <span class="close-menu" onclick="toggleMenu()"><i class="fas fa-times"></i></span>
+    </div>
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <a href="about.html" onclick="toggleMenu()">About Us</a>
+    <div class="mobile-dropdown">
+      <input type="checkbox" id="servicesToggle" class="dropdown-toggle-input">
+      <label for="servicesToggle" class="mobile-dropdown-toggle">
+        Services <i class="fas fa-chevron-down"></i>
+      </label>
+      <div class="mobile-dropdown-menu">
+        <a href="service-staffing-augmentation.html" onclick="toggleMenu()">Staffing Augmentation</a>
+        <a href="service-direct-hiring-staffing.html" onclick="toggleMenu()">Direct Hire Staffing</a>
+        <a href="service-contrat-to-hire-staffing.html" onclick="toggleMenu()">Contract to Hire Staffing</a>
+        <a href="service-contract-staffing.html" onclick="toggleMenu()">Contract Staffing</a>
+        <a href="service-offshoring.html" onclick="toggleMenu()">Offshore Staffing </a>
+        <a href="service-recruitment-outsourcing.html" onclick="toggleMenu()">Recruitment Process Outsourcing</a>
+      </div>
+    </div>
+    <a href="industries.html" onclick="toggleMenu()">Industries</a>
+    <a href="careers.html" onclick="toggleMenu()">Careers</a>
+    <a href="blogs.html" onclick="toggleMenu()">Blogs</a>
+    <a href="contact.html" onclick="toggleMenu()">Contact</a>
+    <div class="mobile-btns">
+      <a href="careers.html"><button class="btn-teal" style="justify-content:center"><i class="fas fa-briefcase"></i> Find Jobs</button></a>
+     <a href="contact.html"><button class="btn-teal" style="justify-content:center"><i class="fas fa-briefcase"></i> Get In Touch</button></a>
+
+    </div>
+  </div>
+
+    <!-- HERO BANNER -->
+    <section class="page-hero">
+        <div class="page-hero-tag">Join Our Team</div>
+        <h1>Careers</h1>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            Careers
+        </div>
+    </section>
+
+    <!-- ===================== CAREERS SECTION START ===================== -->
+
+    <!-- CAREERS INTRO -->
+    <section class="careers-intro fade-up">
+        <div class="careers-intro-inner">
+            <div class="careers-intro-text">
+                <span class="section-badge">We're Hiring</span>
+                <h2>Build Your Future <br><span class="teal-gradient-text">With Greenwave</span></h2>
+                <p>At Greenwave Staffing, we believe great companies are built by great people. We're always on the
+                    lookout for driven, talented professionals who want to make a real impact. Explore our open roles
+                    and find where you fit.</p>
+                <div class="careers-stats-row">
+                    <div class="careers-stat">
+                        <strong>50+</strong>
+                        <span>Open Positions</span>
+                    </div>
+                    <div class="careers-stat">
+                        <strong>12+</strong>
+                        <span>Industries</span>
+                    </div>
+                    <div class="careers-stat">
+                        <strong>4</strong>
+                        <span>Global Offices</span>
+                    </div>
+                </div>
+            </div>
+            <div class="careers-intro-visual">
+                <div class="careers-badge-card">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <strong>Team-First Culture</strong>
+                        <span>Collaborate. Grow. Succeed together.</span>
+                    </div>
+                </div>
+                <div class="careers-badge-card">
+                    <i class="fas fa-globe-americas"></i>
+                    <div>
+                        <strong>Remote Friendly</strong>
+                        <span>Work from anywhere in the world.</span>
+                    </div>
+                </div>
+                <div class="careers-badge-card">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <strong>Career Growth</strong>
+                        <span>Clear paths and mentorship at every level.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOB SEARCH & FILTER BAR -->
+    <!-- <section class="jobs-filter-section">
+    <div class="jobs-filter-inner">
+      <div class="jobs-search-wrap">
+        <i class="fas fa-search"></i>
+        <input type="text" id="jobSearchInput" placeholder="Search job title, skill, or keyword..." oninput="filterJobs()">
+      </div>
+      <div class="jobs-filter-controls">
+        <select id="filterDept" onchange="filterJobs()">
+          <option value="">All Departments</option>
+          <option value="Engineering">Engineering</option>
+          <option value="AI & ML">AI & ML</option>
+          <option value="IT">IT</option>
+          <option value="Healthcare">Healthcare</option>
+          <option value="Finance">Finance</option>
+          <option value="Operations">Operations</option>
+        </select>
+        <select id="filterType" onchange="filterJobs()">
+          <option value="">All Types</option>
+          <option value="Full-Time">Full-Time</option>
+          <option value="Contract">Contract</option>
+          <option value="Contract-to-Hire">Contract-to-Hire</option>
+          <option value="Remote">Remote</option>
+        </select>
+        <select id="filterLocation" onchange="filterJobs()">
+          <option value="">All Locations</option>
+          <option value="Atlanta, GA">Atlanta, GA</option>
+          <option value="Remote">Remote</option>
+          <option value="New York, NY">New York, NY</option>
+          <option value="Houston, TX">Houston, TX</option>
+          <option value="UK">UK</option>
+        </select>
+      </div>
+    </div>
+  </section> -->
+
+    <!-- JOB LISTINGS -->
+    <section class="jobs-listings-section">
+        <div class="jobs-listings-inner">
+
+            <!-- <div class="jobs-results-bar">
+                <span id="jobCount">Showing <strong>12</strong> open positions</span>
+                <div class="jobs-view-toggle">
+                    <button class="view-btn active" id="gridViewBtn" onclick="setView('grid')" title="Grid View"><i
+                            class="fas fa-th-large"></i></button>
+                    <button class="view-btn" id="listViewBtn" onclick="setView('list')" title="List View"><i
+                            class="fas fa-list"></i></button>
+                </div>
+            </div> -->
+
+            <div class="jobs-grid" id="jobsGrid">
+
+                <!-- JOB CARD 1 -->
+                <div class="job-card" data-dept="Engineering" data-type="Full-Time" data-location="Atlanta, GA"
+                    data-tags="civil structural infrastructure">
+                    <div class="job-card-header">
+                        <div class="job-icon-wrap engineering">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <div class="job-badges">
+                            <span class="badge-dept">Engineering</span>
+                            <span class="badge-type full-time">Full-Time</span>
+                        </div>
+                    </div>
+                    <h3 class="job-title">Civil Engineer</h3>
+                    <p class="job-location"><i class="fas fa-map-marker-alt"></i> Atlanta, GA</p>
+                    <p class="job-desc">Design and oversee construction projects including roads, bridges, water systems
+                        and infrastructure. Work with cross-functional teams on project feasibility, budgeting, and
+                        compliance with safety codes.</p>
+                    <ul class="job-highlights">
+                        <li><i class="fas fa-check-circle"></i> 5+ years civil engineering experience</li>
+                        <li><i class="fas fa-check-circle"></i> AutoCAD & Civil 3D proficiency</li>
+                        <li><i class="fas fa-check-circle"></i> PE license preferred</li>
+                    </ul>
+                    <div class="job-card-footer">
+                        <span class="job-salary"><i class="fas fa-dollar-sign"></i> $90K – $130K / yr</span>
+                        <a href="contact.html"><button class="btn-apply"> Apply Now <i
+                                    class="fas fa-arrow-right"></i></button></a>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 2 -->
+                <div class="job-card" data-dept="AI & ML" data-type="Full-Time" data-location="Remote"
+                    data-tags="ai ml machine learning deep learning python nlp">
+                    <div class="job-card-header">
+                        <div class="job-icon-wrap aiml">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="job-badges">
+                            <span class="badge-dept aiml">AI &amp; ML</span>
+                            <span class="badge-type full-time">Full-Time</span>
+                        </div>
+                    </div>
+                    <h3 class="job-title">AI/ML Engineer</h3>
+                    <p class="job-location"><i class="fas fa-map-marker-alt"></i> Remote</p>
+                    <p class="job-desc">Build and deploy scalable machine learning models and AI systems. Collaborate
+                        with data scientists and software engineers to productionize ML pipelines across cloud
+                        environments.</p>
+                    <ul class="job-highlights">
+                        <li><i class="fas fa-check-circle"></i> Expert in Python, TensorFlow / PyTorch</li>
+                        <li><i class="fas fa-check-circle"></i> Experience with MLOps & model deployment</li>
+                        <li><i class="fas fa-check-circle"></i> NLP / Computer Vision a plus</li>
+                    </ul>
+                    <div class="job-card-footer">
+                        <span class="job-salary"><i class="fas fa-dollar-sign"></i> $120K – $170K / yr</span>
+                        <a href="contact.html"><button class="btn-apply"> Apply Now <i
+                                    class="fas fa-arrow-right"></i></button></a>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 3 -->
+                <div class="job-card" data-dept="IT" data-type="Contract" data-location="Remote"
+                    data-tags="devops cloud aws azure kubernetes">
+                    <div class="job-card-header">
+                        <div class="job-icon-wrap it">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="job-badges">
+                            <span class="badge-dept it">IT</span>
+                            <span class="badge-type contract">Contract</span>
+                        </div>
+                    </div>
+                    <h3 class="job-title">DevOps / Cloud Engineer</h3>
+                    <p class="job-location"><i class="fas fa-map-marker-alt"></i> Remote</p>
+                    <p class="job-desc">Manage CI/CD pipelines, cloud infrastructure, and container orchestration. Drive
+                        automation and reliability across AWS/Azure environments for enterprise-grade applications.</p>
+                    <ul class="job-highlights">
+                        <li><i class="fas fa-check-circle"></i> AWS / Azure certified preferred</li>
+                        <li><i class="fas fa-check-circle"></i> Kubernetes, Docker, Terraform expertise</li>
+                        <li><i class="fas fa-check-circle"></i> Strong Linux & scripting skills</li>
+                    </ul>
+                    <div class="job-card-footer">
+                        <span class="job-salary"><i class="fas fa-dollar-sign"></i> $65 – $95 / hr</span>
+                        <a href="contact.html"><button class="btn-apply"> Apply Now <i
+                                    class="fas fa-arrow-right"></i></button></a>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 4 -->
+                <div class="job-card" data-dept="Healthcare" data-type="Full-Time" data-location="Atlanta, GA"
+                    data-tags="registered nurse rn healthcare hospital">
+                    <div class="job-card-header">
+                        <div class="job-icon-wrap healthcare">
+                            <i class="fas fa-user-nurse"></i>
+                        </div>
+                        <div class="job-badges">
+                            <span class="badge-dept healthcare">Healthcare</span>
+                            <span class="badge-type full-time">Full-Time</span>
+                        </div>
+                    </div>
+                    <h3 class="job-title">Registered Nurse (RN)</h3>
+                    <p class="job-location"><i class="fas fa-map-marker-alt"></i> Atlanta, GA</p>
+                    <p class="job-desc">Provide compassionate, high-quality care to patients in acute care settings.
+                        Collaborate with physicians and care teams to develop and execute individualized treatment
+                        plans.</p>
+                    <ul class="job-highlights">
+                        <li><i class="fas fa-check-circle"></i> Active RN License (Georgia)</li>
+                        <li><i class="fas fa-check-circle"></i> BLS / ACLS certification required</li>
+                        <li><i class="fas fa-check-circle"></i> 2+ years acute care experience</li>
+                    </ul>
+                    <div class="job-card-footer">
+                        <span class="job-salary"><i class="fas fa-dollar-sign"></i> $75K – $100K / yr</span>
+                        <a href="contact.html"><button class="btn-apply"> Apply Now <i
+                                    class="fas fa-arrow-right"></i></button></a>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 5 -->
+                <div class="job-card" data-dept="Finance" data-type="Contract-to-Hire" data-location="New York, NY"
+                    data-tags="finance analyst financial modeling cfa">
+                    <div class="job-card-header">
+                        <div class="job-icon-wrap finance">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="job-badges">
+                            <span class="badge-dept finance">Finance</span>
+                            <span class="badge-type c2h">Contract-to-Hire</span>
+                        </div>
+                    </div>
+                    <h3 class="job-title">Financial Analyst</h3>
+                    <p class="job-location"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                    <p class="job-desc">Conduct financial modeling, variance analysis, and strategic reporting. Partner
+                        with business units to deliver insights that drive cost efficiency and revenue growth.</p>
+                    <ul class="job-highlights">
+                        <li><i class="fas fa-check-circle"></i> Advanced Excel & financial modeling</li>
+                        <li><i class="fas fa-check-circle"></i> CFA or MBA preferred</li>
+                        <li><i class="fas fa-check-circle"></i> 3+ years in finance/accounting</li>
+                    </ul>
+                    <div class="job-card-footer">
+                        <span class="job-salary"><i class="fas fa-dollar-sign"></i> $80K – $110K / yr</span>
+                        <a href="contact.html"><button class="btn-apply"> Apply Now <i
+                                    class="fas fa-arrow-right"></i></button></a>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 6 -->
+                <div class="job-card" data-dept="Engineering" data-type="Full-Time" data-location="Houston, TX"
+                    data-tags="mechanical engineer manufacturing cad solidworks">
+                    <div class="job-card-header">
+                        <div class="job-icon-wrap engineering">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="job-badges">
+                            <span class="badge-dept">Engineering</span>
+                            <span class="badge-type full-time">Full-Time</span>
+                        </div>
+                    </div>
+                    <h3 class="job-title">Mechanical Engineer</h3>
+                    <p class="job-location"><i class="fas fa-map-marker-alt"></i> Houston, TX</p>
+                    <p class="job-desc">Design, analyze, and improve mechanical systems and components for industrial
+                        applications. Lead product development cycles from concept through manufacturing and QA
+                        validation.</p>
+                    <ul class="job-highlights">
+                        <li><i class="fas fa-check-circle"></i> Proficient in SolidWorks / CATIA</li>
+                        <li><i class="fas fa-check-circle"></i> FEA & thermal analysis experience</li>
+                        <li><i class="fas fa-check-circle"></i> BS/MS Mechanical Engineering</li>
+                    </ul>
+                    <div class="job-card-footer">
+                        <span class="job-salary"><i class="fas fa-dollar-sign"></i> $85K – $120K / yr</span>
+                        <a href="contact.html"><button class="btn-apply"> Apply Now <i
+                                    class="fas fa-arrow-right"></i></button></a>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 7 -->
+                <div class="job-card" data-dept="AI & ML" data-type="Full-Time" data-location="Remote"
+                    data-tags="data scientist python r analytics ml statistics">
+                    <div class="job-card-header">
+                        <div class="job-icon-wrap aiml">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="job-badges">
+                            <span class="badge-dept aiml">AI &amp; ML</span>
+                            <span class="badge-type full-time">Full-Time</span>
+                        </div>
+                    </div>
+                    <h3 class="job-title">Data Scientist</h3>
+                    <p class="job-location"><i class="fas fa-map-marker-alt"></i> Remote</p>
+                    <p class="job-desc">Mine large datasets to uncover trends and build predictive models. Communicate
+                        findings to stakeholders through compelling visualizations and data-driven storytelling.</p>
+                    <ul class="job-highlights">
+                        <li><i class="fas fa-check-circle"></i> Python / R & SQL expertise</li>
+                        <li><i class="fas fa-check-circle"></i> Statistical modeling & A/B testing</li>
+                        <li><i class="fas fa-check-circle"></i> Experience with Tableau or Power BI</li>
+                    </ul>
+                    <div class="job-card-footer">
+                        <span class="job-salary"><i class="fas fa-dollar-sign"></i> $105K – $145K / yr</span>
+                        <a href="contact.html"><button class="btn-apply"> Apply Now <i
+                                    class="fas fa-arrow-right"></i></button></a>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 8 -->
+                <div class="job-card" data-dept="IT" data-type="Full-Time" data-location="Remote"
+                    data-tags="cybersecurity security soc penetration testing cissp">
+                    <div class="job-card-header">
+                        <div class="job-icon-wrap it">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="job-badges">
+                            <span class="badge-dept it">IT</span>
+                            <span class="badge-type full-time">Full-Time</span>
+                        </div>
+                    </div>
+                    <h3 class="job-title">Cybersecurity Analyst</h3>
+                    <p class="job-location"><i class="fas fa-map-marker-alt"></i> Remote</p>
+                    <p class="job-desc">Monitor and protect organizational systems against threats and vulnerabilities.
+                        Lead incident response, conduct security assessments, and implement policies to safeguard
+                        critical data.</p>
+                    <ul class="job-highlights">
+                        <li><i class="fas fa-check-circle"></i> CISSP / CompTIA Security+ preferred</li>
+                        <li><i class="fas fa-check-circle"></i> SIEM, IDS/IPS, firewall management</li>
+                        <li><i class="fas fa-check-circle"></i> Pen testing & threat intelligence</li>
+                    </ul>
+                    <div class="job-card-footer">
+                        <span class="job-salary"><i class="fas fa-dollar-sign"></i> $95K – $135K / yr</span>
+                        <a href="contact.html"><button class="btn-apply"> Apply Now <i
+                                    class="fas fa-arrow-right"></i></button></a>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 9 -->
+                <div class="job-card" data-dept="Operations" data-type="Full-Time" data-location="Atlanta, GA"
+                    data-tags="project manager pmp agile scrum operations">
+                    <div class="job-card-header">
+                        <div class="job-icon-wrap ops">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="job-badges">
+                            <span class="badge-dept ops">Operations</span>
+                            <span class="badge-type full-time">Full-Time</span>
+                        </div>
+                    </div>
+                    <h3 class="job-title">Project Manager (PMP)</h3>
+                    <p class="job-location"><i class="fas fa-map-marker-alt"></i> Atlanta, GA</p>
+                    <p class="job-desc">Lead cross-functional teams to deliver complex projects on time and on budget.
+                        Own project scope, risk management, stakeholder communication, and continuous improvement
+                        initiatives.</p>
+                    <ul class="job-highlights">
+                        <li><i class="fas fa-check-circle"></i> PMP or PMI-ACP certified</li>
+                        <li><i class="fas fa-check-circle"></i> Agile / Scrum mastery</li>
+                        <li><i class="fas fa-check-circle"></i> 5+ years enterprise project management</li>
+                    </ul>
+                    <div class="job-card-footer">
+                        <span class="job-salary"><i class="fas fa-dollar-sign"></i> $100K – $140K / yr</span>
+                        <a href="contact.html"><button class="btn-apply"> Apply Now <i
+                                    class="fas fa-arrow-right"></i></button></a>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 10 -->
+                <div class="job-card" data-dept="Engineering" data-type="Contract" data-location="UK"
+                    data-tags="electrical engineer power systems plc automation">
+                    <div class="job-card-header">
+                        <div class="job-icon-wrap engineering">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="job-badges">
+                            <span class="badge-dept">Engineering</span>
+                            <span class="badge-type contract">Contract</span>
+                        </div>
+                    </div>
+                    <h3 class="job-title">Electrical Engineer</h3>
+                    <p class="job-location"><i class="fas fa-map-marker-alt"></i> UK</p>
+                    <p class="job-desc">Design electrical systems for industrial and commercial applications. Oversee
+                        installation, testing, and commissioning of power distribution, control panels, and automation
+                        systems.</p>
+                    <ul class="job-highlights">
+                        <li><i class="fas fa-check-circle"></i> PLC & SCADA programming experience</li>
+                        <li><i class="fas fa-check-circle"></i> BS/MS Electrical Engineering</li>
+                        <li><i class="fas fa-check-circle"></i> IEE / IEEE standards knowledge</li>
+                    </ul>
+                    <div class="job-card-footer">
+                        <span class="job-salary"><i class="fas fa-dollar-sign"></i> £55K – £80K / yr</span>
+                        <a href="contact.html"><button class="btn-apply"> Apply Now <i
+                                    class="fas fa-arrow-right"></i></button></a>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 11 -->
+                <div class="job-card" data-dept="IT" data-type="Contract-to-Hire" data-location="Remote"
+                    data-tags="full stack developer react node javascript web">
+                    <div class="job-card-header">
+                        <div class="job-icon-wrap it">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="job-badges">
+                            <span class="badge-dept it">IT</span>
+                            <span class="badge-type c2h">Contract-to-Hire</span>
+                        </div>
+                    </div>
+                    <h3 class="job-title">Full Stack Developer</h3>
+                    <p class="job-location"><i class="fas fa-map-marker-alt"></i> Remote</p>
+                    <p class="job-desc">Architect and develop scalable web applications end-to-end. Collaborate with
+                        product and design teams to ship features rapidly using modern JavaScript frameworks and cloud
+                        services.</p>
+                    <ul class="job-highlights">
+                        <li><i class="fas fa-check-circle"></i> React / Vue + Node.js / Express</li>
+                        <li><i class="fas fa-check-circle"></i> PostgreSQL, MongoDB, Redis</li>
+                        <li><i class="fas fa-check-circle"></i> REST / GraphQL API experience</li>
+                    </ul>
+                    <div class="job-card-footer">
+                        <span class="job-salary"><i class="fas fa-dollar-sign"></i> $95K – $130K / yr</span>
+                        <a href="contact.html"><button class="btn-apply"> Apply Now <i
+                                    class="fas fa-arrow-right"></i></button></a>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 12 -->
+                <div class="job-card" data-dept="Healthcare" data-type="Contract" data-location="Atlanta, GA"
+                    data-tags="physical therapist pt rehabilitation healthcare">
+                    <div class="job-card-header">
+                        <div class="job-icon-wrap healthcare">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="job-badges">
+                            <span class="badge-dept healthcare">Healthcare</span>
+                            <span class="badge-type contract">Contract</span>
+                        </div>
+                    </div>
+                    <h3 class="job-title">Physical Therapist (PT)</h3>
+                    <p class="job-location"><i class="fas fa-map-marker-alt"></i> Atlanta, GA</p>
+                    <p class="job-desc">Evaluate and treat patients to restore mobility and reduce pain from injuries or
+                        illness. Develop personalized rehabilitation programs in collaboration with physicians and care
+                        teams.</p>
+                    <ul class="job-highlights">
+                        <li><i class="fas fa-check-circle"></i> DPT degree & state licensure</li>
+                        <li><i class="fas fa-check-circle"></i> Orthopedic / neuro rehab experience</li>
+                        <li><i class="fas fa-check-circle"></i> CPR / BLS certification required</li>
+                    </ul>
+                    <div class="job-card-footer">
+                        <span class="job-salary"><i class="fas fa-dollar-sign"></i> $80K – $105K / yr</span>
+                        <a href="contact.html"><button class="btn-apply"> Apply Now <i
+                                    class="fas fa-arrow-right"></i></button></a>
+                    </div>
+                </div>
+
+            </div><!-- /jobs-grid -->
+
+            <!-- NO RESULTS STATE -->
+            <div class="jobs-no-results" id="noResults" style="display:none;">
+                <i class="fas fa-search"></i>
+                <h3>No positions found</h3>
+                <p>Try adjusting your search or filter criteria.</p>
+                <button onclick="resetFilters()" class="btn-reset-filters">Clear Filters</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <!-- <section class="careers-cta fade-up">
+    <div class="careers-cta-inner">
+      <div class="careers-cta-text">
+        <h2>Don't See the Right Fit?</h2>
+        <p>Submit your resume and we'll match you with roles that fit your skills and career goals — even before they're posted.</p>
+      </div>
+      <div class="careers-cta-actions">
+        <button class="btn-cta-teal" onclick="openApplyModal('General Application')"><i class="fas fa-file-upload"></i> Submit Your Resume</button>
+        <button class="btn-cta-outline" onclick="openConsultForm()"><i class="fas fa-calendar-check"></i> Free Consultation</button>
+      </div>
+    </div>
+  </section> -->
+
+    <!-- ===================== CAREERS SECTION END ===================== -->
+
+    <!-- APPLY MODAL -->
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom:14px">
+                    <h4>GREENWAVE STAFFING INC</h4>
+                </div>
+                <p>Greenwave Staffing Inc provides expert global staffing solutions for your organization. We specialize
+                    in connecting businesses with highly skilled, pre-screened professionals across multiple industries
+                    and job roles. Our strategic hiring approach ensures that companies gain access to top talent while
+                    reducing time-to-hire and recruitment costs.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Quick Links</h5>
+                  <ul>
+          <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          <li><a href="careers.html"><i class="fas fa-chevron-right"></i> Careers</a></li>
+          <li><a href="blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          <li><a href="industries.html"><i class="fas fa-chevron-right"></i> Industries</a></li>
+        </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Services</h5>
+                  <ul>
+          <li><a href="service-staffing-augmentation.html"><i class="fas fa-chevron-right"></i>Staffing Augmentation</a></li>
+          <li><a href="service-direct-hiring-staffing.html"><i class="fas fa-chevron-right"></i>Direct Hire Staffing</a></li>
+          <li><a href="service-contrat-to-hire-staffing.html"><i class="fas fa-chevron-right"></i>Contract-to-Hire Staffing</a></li>
+          <li><a href="service-contract-staffing.html"><i class="fas fa-chevron-right"></i>Contract Staffing</a></li>
+          <li><a href="service-offshoring.html"><i class="fas fa-chevron-right"></i>Offshore Staffing</a></li>
+          <li><a href="service-recruitment-outsourcing.html"><i class="fas fa-chevron-right"></i>Recruitment Process Outsourcing</a></li>
+        </ul>
+            </div>
+            <div class="footer-col footer-contact">
+                <h5>Get In Touch</h5>
+                <div class="office-block">
+                    <strong>USA Office (Head Quarters):</strong>
+                    <p>525 Randall Ave, Ste 100 PMB 388 Cheyenne, WY 82001</p>
+                </div>
+                <div class="office-block">
+                    <strong>USA Office (Main Branch):</strong>
+                    <p>8735 Dunwoody Place STE R Atlanta, GA 30350</p>
+                </div>
+                <div class="office-block">
+                    <strong>UK Office</strong>
+                    <p>Brunswick Street, Cheltenham, Gloucester, UK GL504HA</p>
+                </div>
+                <div class="office-block">
+                    <strong>Canada Office:</strong>
+                    <p>Unit 1707, Mississauga, Ontario L5B0A1</p>
+                </div>
+                <div class="office-block">
+                    <strong>Contact</strong>
+                    <p><i class="fas fa-envelope"></i> <a
+                            href="mailto:info@greenwavestaff.com">info@greenwavestaff.com</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+14043017997">404 301-7997</a> ext: 800</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="color:rgba(241,234,234,0.855);font-size:13px">
+                © <span id="year"></span> Greenwave Staffing INC. All rights reserved.
+            </p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CONSULTATION PANEL -->
+    <div class="consult-overlay" id="consultOverlay" onclick="handleOverlayClick(event)">
+        <div class="consult-panel" id="consultPanel">
+            <button class="consult-close" onclick="closeConsultForm()"><i class="fas fa-times"></i></button>
+            <div class="consult-header">
+                <div class="consult-icon"><i class="fas fa-calendar-check"></i></div>
+                <h2>Free Consultation</h2>
+                <p>Tell us your needs and we'll connect you with the right talent — fast.</p>
+            </div>
+            <div class="consult-body">
+                <div class="consult-field"><label>Full Name</label><input type="text" placeholder="John Smith"></div>
+                <div class="consult-field"><label>Email Address</label><input type="email"
+                        placeholder="john@company.com"></div>
+                <div class="consult-field"><label>Phone Number</label><input type="tel" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="consult-field"><label>Company Name</label><input type="text" placeholder="Your Company">
+                </div>
+                <div class="consult-field">
+                    <label>What are you looking for?</label>
+                    <select>
+                        <option value="">Select an option</option>
+                        <option>Hire Talent / Staff</option>
+                        <option>Find a Job</option>
+                        <option>Workforce Consulting</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="consult-field"><label>Message (Optional)</label><textarea placeholder="Tell us more..."
+                        rows="3"></textarea></div>
+                <button class="consult-submit"><i class="fas fa-paper-plane"></i> Book My Free Consultation</button>
+                <p class="consult-note"><i class="fas fa-lock"></i> Your info is 100% secure and never shared.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/14043017997" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/career.js"></script>
+</body>
+
+</html>

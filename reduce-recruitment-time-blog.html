@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us – Greenwave Staffing LLC</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+
+  <div class="consultation-tab" onclick="openConsultForm()">
+    <span><i class="fas fa-calendar-check"></i> Free Consultation</span>
+  </div>
+  <!-- TOP INFO BAR -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="tel:+1 404 301-7997 ext: 800"><i class="fas fa-phone-alt"></i> Call Us: +1 404 301-7997</a>
+      <a href="mailto:info@greenwavestaff.com"><i class="fas fa-envelope"></i> info@greenwavestaff.com</a>
+    </div>
+    <div class="top-bar-right">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" style="margin:0 6px"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="margin-left:6px"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- HEADER -->
+  <!-- HEADER -->
+  <!-- HEADER -->
+  <header class="header" id="mainHeader">
+    <div class="logo">
+      <a href="index.html"><img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC"></a>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <div class="nav-dropdown">
+        <a href="#services" class="nav-dropdown-toggle">
+          Offering <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="service-staffing-augmentation.html">Staffing Augmentation </a>
+          <a href="service-direct-hiring-staffing.html">Direct Hire Staffing</a>
+          <a href="service-contrat-to-hire-staffing.html">Contract to Hire Staffing</a>
+          <a href="service-contract-staffing.html">Contract Staffing</a>
+          <a href="service-offshoring.html">Offshore Staffing </a>
+          <a href="service-recruitment-outsourcing.html">Recruitment Process Outsourcing </a>
+        </div>
+      </div>
+
+      <a href="industries.html">Industries</a>
+      <a href="careers.html">Careers</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-btns">
+     <a href="careers.html"><button class="btn-teal"><i class="fas fa-briefcase"></i> Find Jobs</button></a>
+      <a href="contact.html"><button class="btn-teal"><i class="fas fa-briefcase"></i> Get In Touch</button></a>
+      
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC">
+      </div>
+      <span class="close-menu" onclick="toggleMenu()"><i class="fas fa-times"></i></span>
+    </div>
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <a href="about.html" onclick="toggleMenu()">About Us</a>
+    <div class="mobile-dropdown">
+      <input type="checkbox" id="servicesToggle" class="dropdown-toggle-input">
+      <label for="servicesToggle" class="mobile-dropdown-toggle">
+        Services <i class="fas fa-chevron-down"></i>
+      </label>
+      <div class="mobile-dropdown-menu">
+        <a href="service-staffing-augmentation.html" onclick="toggleMenu()">Staffing Augmentation</a>
+        <a href="service-direct-hiring-staffing.html" onclick="toggleMenu()">Direct Hire Staffing</a>
+        <a href="service-contrat-to-hire-staffing.html" onclick="toggleMenu()">Contract to Hire Staffing</a>
+        <a href="service-contract-staffing.html" onclick="toggleMenu()">Contract Staffing</a>
+        <a href="service-offshoring.html" onclick="toggleMenu()">Offshore Staffing </a>
+        <a href="service-recruitment-outsourcing.html" onclick="toggleMenu()">Recruitment Process Outsourcing</a>
+      </div>
+    </div>
+    <a href="industries.html" onclick="toggleMenu()">Industries</a>
+    <a href="careers.html" onclick="toggleMenu()">Careers</a>
+    <a href="blogs.html" onclick="toggleMenu()">Blogs</a>
+    <a href="contact.html" onclick="toggleMenu()">Contact</a>
+    <div class="mobile-btns">
+      <a href="careers.html"><button class="btn-teal" style="justify-content:center"><i class="fas fa-briefcase"></i> Find Jobs</button></a>
+     <a href="contact.html"><button class="btn-teal" style="justify-content:center"><i class="fas fa-briefcase"></i> Get In Touch</button></a>
+
+    </div>
+  </div>
+  <!-- HERO BANNER -->
+
+  <!-- QUICK CONTACT STRIP -->
+  <!-- ═══════════════════════════════════════════════════════════
+     BLOG DETAIL PAGE — SECTION CODE ONLY
+     Save as: blog-detail.html  (paste between your header & footer)
+     Link:    assets/css/blog-detail.css
+              assets/js/blog-detail.js
+═══════════════════════════════════════════════════════════ -->
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-tag">Insights & Trends</div>
+    <h1>How to Reduce Recruitment Time </h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="blogs.html">Blogs</a>
+      <span>/</span>
+      How to Reduce Recruitment Time
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+     BLOG DETAIL SECTION
+═══════════════════════════════════════════ -->
+  <section class="bd-section">
+    <div class="bd-container">
+
+      <!-- ══ LEFT: MAIN ARTICLE ══ -->
+      <article class="bd-article">
+
+        <!-- Article Hero Card -->
+        <div class="bd-hero-card">
+          <div class="bd-hero-meta">
+            <span class="bd-cat-tag">Recruitment</span>
+            <span class="bd-meta-divider"></span>
+            <span class="bd-meta-item"><i class="fas fa-calendar-alt"></i> March 28, 2026</span>
+            <span class="bd-meta-divider"></span>
+            <span class="bd-meta-item"><i class="fas fa-clock"></i> 6 min read</span>
+          </div>
+
+          <h1 class="bd-main-title">How to Reduce Recruitment Time</h1>
+
+          <p class="bd-subtitle">
+            Learn practical strategies to speed up your hiring process without compromising on candidate quality or
+            long-term success.
+          </p>
+
+          <div class="bd-author-row">
+            <div class="bd-author-avatar">G</div>
+
+            <div class="bd-author-info">
+              <span class="bd-author-name">Greenwave Editorial Team</span>
+              <span class="bd-author-role">Recruitment & Staffing Experts</span>
+            </div>
+
+            <div class="bd-share-row">
+              <span class="bd-share-label">Share:</span>
+
+              <a href="#" class="bd-share-btn linkedin" title="Share on LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+
+              <a href="#" class="bd-share-btn twitter" title="Share on Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+
+              <a href="#" class="bd-share-btn facebook" title="Share on Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <button class="bd-share-btn copy" title="Copy link" onclick="copyBlogLink()">
+                <i class="fas fa-link"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Image -->
+        <div class="bd-featured-img">
+          <img src="assets/img/images/blogimagethree.webp" alt="How to Reduce Recruitment Time">
+
+          <div class="bd-img-caption">
+            Faster hiring processes help businesses secure top talent before competitors do.
+          </div>
+        </div>
+
+        <!-- Reading Progress Bar -->
+        <div class="bd-progress-bar" id="bdProgressBar"></div>
+
+        <!-- Article Body -->
+        <div class="bd-body">
+
+          <!-- Intro -->
+          <p class="bd-lead">
+            In today’s competitive hiring market, speed matters more than ever. Top candidates are often hired within
+            days, not weeks. Companies with slow recruitment processes risk losing highly qualified professionals to
+            faster-moving competitors. The good news? Reducing recruitment time doesn’t mean lowering hiring standards —
+            it means improving efficiency, communication, and decision-making.
+          </p>
+
+          <!-- Section 1 -->
+          <h2 class="bd-heading" id="step1">
+            <span class="bd-heading-num">01</span>
+            Create Clear Job Descriptions
+          </h2>
+
+          <p>
+            One of the biggest causes of hiring delays is unclear job requirements. When hiring managers and recruiters
+            are not aligned, screening becomes inconsistent and interviews become repetitive.
+          </p>
+
+          <p>
+            A well-written job description should clearly define responsibilities, required skills, preferred
+            qualifications, salary expectations, and reporting structure. This helps attract the right candidates from
+            the beginning and reduces unqualified applications.
+          </p>
+
+          <!-- Highlight Box -->
+          <div class="bd-highlight-box">
+            <div class="bd-highlight-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+
+            <div>
+              <strong>Quick Tip:</strong>
+              Clear job descriptions can reduce screening time by up to 40% and improve candidate quality significantly.
+            </div>
+          </div>
+
+          <!-- Section 2 -->
+          <h2 class="bd-heading" id="step2">
+            <span class="bd-heading-num">02</span>
+            Use AI & Recruitment Technology
+          </h2>
+
+          <p>
+            Modern recruitment tools can automate repetitive hiring tasks such as resume screening, interview
+            scheduling, applicant tracking, and candidate communication.
+          </p>
+
+          <p>
+            AI-powered Applicant Tracking Systems (ATS) help recruiters quickly shortlist suitable candidates based on
+            skills, experience, and keywords. Automated workflows also eliminate manual bottlenecks that slow down
+            hiring teams.
+          </p>
+
+          <!-- Stats Row -->
+          <div class="bd-stats-row">
+
+            <div class="bd-stat-box">
+              <div class="bd-stat-num">50%</div>
+              <div class="bd-stat-label">Faster resume screening with ATS systems</div>
+            </div>
+
+            <div class="bd-stat-box">
+              <div class="bd-stat-num">35%</div>
+              <div class="bd-stat-label">Reduction in scheduling delays</div>
+            </div>
+
+            <div class="bd-stat-box">
+              <div class="bd-stat-num">2x</div>
+              <div class="bd-stat-label">Higher recruiter productivity</div>
+            </div>
+
+          </div>
+
+          <!-- Section 3 -->
+          <h2 class="bd-heading" id="step3">
+            <span class="bd-heading-num">03</span>
+            Reduce Interview Rounds
+          </h2>
+
+          <p>
+            Many companies lose candidates because of lengthy interview processes. Multiple interview rounds spread
+            across several weeks create frustration and uncertainty for applicants.
+          </p>
+
+          <p>
+            Keep interviews focused and structured. Most roles can be effectively evaluated within two or three rounds.
+            Assign clear decision-makers early and avoid unnecessary approval layers.
+          </p>
+
+          <!-- Checklist -->
+          <div class="bd-checklist-box">
+
+            <div class="bd-checklist-title">
+              Best Practices for Faster Interviews
+            </div>
+
+            <ul class="bd-checklist">
+              <li><i class="fas fa-circle-check"></i> Schedule interviews within 48 hours of screening</li>
+              <li><i class="fas fa-circle-check"></i> Combine technical and HR discussions where possible</li>
+              <li><i class="fas fa-circle-check"></i> Avoid more than 3 interview rounds</li>
+              <li><i class="fas fa-circle-check"></i> Use virtual interviews for initial assessments</li>
+              <li><i class="fas fa-circle-check"></i> Collect feedback immediately after interviews</li>
+            </ul>
+
+          </div>
+
+          <!-- Section 4 -->
+          <h2 class="bd-heading" id="step4">
+            <span class="bd-heading-num">04</span>
+            Build a Strong Talent Pipeline
+          </h2>
+
+          <p>
+            Waiting until a vacancy opens before searching for candidates slows everything down. Smart companies
+            continuously build talent pipelines for critical roles.
+          </p>
+
+          <p>
+            Maintain relationships with past applicants, industry professionals, freelancers, and passive candidates. A
+            pre-qualified talent pool allows recruiters to move quickly when hiring needs arise.
+          </p>
+
+          <!-- Quote -->
+          <blockquote class="bd-quote">
+            <p>
+              "The fastest hiring companies are not starting from scratch — they are continuously building talent
+              relationships."
+            </p>
+
+            <cite>— Greenwave Staffing Recruitment Insights</cite>
+          </blockquote>
+
+          <!-- Section 5 -->
+          <h2 class="bd-heading" id="step5">
+            <span class="bd-heading-num">05</span>
+            Improve Internal Communication
+          </h2>
+
+          <p>
+            Delays often happen because recruiters, HR teams, and hiring managers are not aligned. Slow feedback,
+            unclear expectations, and missed approvals can extend recruitment timelines significantly.
+          </p>
+
+          <p>
+            Establish hiring timelines, assign responsibilities clearly, and create faster approval workflows. Weekly
+            recruitment updates also help teams stay accountable and avoid unnecessary delays.
+          </p>
+
+          <!-- Section 6 -->
+          <h2 class="bd-heading" id="step6">
+            <span class="bd-heading-num">06</span>
+            Partner with a Staffing Agency
+          </h2>
+
+          <p>
+            Staffing agencies already have access to large talent networks and pre-screened candidates. This
+            dramatically reduces sourcing time and improves hiring speed for urgent roles.
+          </p>
+
+          <p>
+            Recruitment partners like Greenwave Staffing handle sourcing, screening, interview coordination, and
+            candidate communication — allowing businesses to focus on final hiring decisions instead of administrative
+            tasks.
+          </p>
+
+          <!-- Conclusion -->
+          <div class="bd-conclusion">
+
+            <h3>Final Takeaway</h3>
+
+            <p>
+              Reducing recruitment time is about building a smarter and more efficient hiring process. Companies that
+              move quickly not only save operational costs but also secure stronger candidates before competitors do.
+            </p>
+
+            <p>
+              At Greenwave Staffing, we help businesses accelerate hiring through strategic sourcing, technology-driven
+              recruitment, and access to highly qualified professionals across multiple industries.
+            </p>
+
+          </div>
+
+          <!-- Tags -->
+          <div class="bd-tags">
+            <span class="bd-tag-label">Tags:</span>
+
+            <a href="#" class="bd-tag">Recruitment</a>
+            <a href="#" class="bd-tag">Hiring Process</a>
+            <a href="#" class="bd-tag">Staffing</a>
+            <a href="#" class="bd-tag">Talent Acquisition</a>
+            <a href="#" class="bd-tag">HR Strategy</a>
+          </div>
+
+          <!-- Share Bottom -->
+          <div class="bd-share-bottom">
+
+            <span>Found this helpful? Share it:</span>
+
+            <div class="bd-share-btns">
+
+              <a href="#" class="bd-share-btn linkedin">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+
+              <a href="#" class="bd-share-btn twitter">
+                <i class="fab fa-twitter"></i> Twitter
+              </a>
+
+              <a href="#" class="bd-share-btn facebook">
+                <i class="fab fa-facebook-f"></i> Facebook
+              </a>
+
+            </div>
+
+          </div>
+
+        </div><!-- /bd-body -->
+
+      </article>
+      <!-- ══ END ARTICLE ══ -->
+
+
+      <!-- ══ RIGHT: SIDEBAR ══ -->
+      <aside class="bd-sidebar">
+
+        <!-- Search Widget -->
+        <div class="bd-widget">
+
+          <div class="bd-widget-title">Search Blogs</div>
+
+          <div class="bd-search-wrap">
+            <input type="text" placeholder="Search articles...">
+            <button><i class="fas fa-search"></i></button>
+          </div>
+
+        </div>
+
+        <!-- Categories Widget -->
+        <div class="bd-widget">
+
+          <div class="bd-widget-title">Categories</div>
+
+          <ul class="bd-cat-list">
+
+            <li>
+              <a href="#">
+                <i class="fas fa-chevron-right"></i> Recruitment
+                <span>3</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fas fa-chevron-right"></i> Staffing
+                <span>2</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fas fa-chevron-right"></i> Career Tips
+                <span>2</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fas fa-chevron-right"></i> HR Strategy
+                <span>1</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fas fa-chevron-right"></i> Workforce
+                <span>1</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <!-- Recent Posts Widget -->
+        <div class="bd-widget">
+
+          <div class="bd-widget-title">Recent Posts</div>
+
+          <div class="bd-recent-posts">
+
+            <a href="blog-detail.html" class="bd-recent-post">
+
+              <div class="bd-recent-img">
+                <img src="assets/img/images/blogimageone.webp" alt="Top Hiring Trends in 2026">
+              </div>
+
+              <div class="bd-recent-info">
+                <span class="bd-recent-date">
+                  <i class="fas fa-calendar-alt"></i> April 10, 2026
+                </span>
+
+                <h5>Top Hiring Trends in 2026</h5>
+              </div>
+
+            </a>
+
+            <a href="blog-detail.html" class="bd-recent-post">
+
+              <div class="bd-recent-img">
+                <img src="assets/img/images/blogimagetwo.webp" alt="Contract Staffing Benefits">
+              </div>
+
+              <div class="bd-recent-info">
+                <span class="bd-recent-date">
+                  <i class="fas fa-calendar-alt"></i> April 5, 2026
+                </span>
+
+                <h5>Contract Staffing Benefits</h5>
+              </div>
+
+            </a>
+
+            <a href="blog-detail.html" class="bd-recent-post">
+
+              <div class="bd-recent-img">
+                <img src="assets/img/images/blogimagefour.webp" alt="Interview Tips for Candidates">
+              </div>
+
+              <div class="bd-recent-info">
+                <span class="bd-recent-date">
+                  <i class="fas fa-calendar-alt"></i> March 18, 2026
+                </span>
+
+                <h5>Interview Tips for Candidates</h5>
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- CTA Widget -->
+        <div class="bd-widget bd-cta-widget">
+
+          <div class="bd-cta-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+
+          <h3>Need Faster Hiring?</h3>
+
+          <p>
+            Book a free consultation with our staffing specialists today.
+          </p>
+
+          <button class="bd-cta-btn" onclick="openConsultForm()">
+            <i class="fas fa-paper-plane"></i> Free Consultation
+          </button>
+
+        </div>
+
+        <!-- Tags Widget -->
+        <div class="bd-widget">
+
+          <div class="bd-widget-title">Popular Tags</div>
+
+          <div class="bd-tag-cloud">
+
+            <a href="#" class="bd-tag">Recruitment</a>
+            <a href="#" class="bd-tag">Hiring</a>
+            <a href="#" class="bd-tag">Staffing</a>
+            <a href="#" class="bd-tag">Talent</a>
+            <a href="#" class="bd-tag">HR</a>
+            <a href="#" class="bd-tag">Candidates</a>
+            <a href="#" class="bd-tag">Interview</a>
+            <a href="#" class="bd-tag">Workforce</a>
+            <a href="#" class="bd-tag">Business</a>
+            <a href="#" class="bd-tag">Recruiters</a>
+
+          </div>
+
+        </div>
+
+      </aside>
+      <!-- ══ END SIDEBAR ══ -->
+
+    </div>
+  </section>
+
+  <!-- RELATED BLOGS -->
+
+  <!-- ═══════════════════════════════════════════
+     END BLOG DETAIL SECTION
+═══════════════════════════════════════════ -->
+
+  <!-- MAIN CONTACT: INFO + FORM -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:14px">
+          <h4>GREENWAVE STAFFING INC</h4>
+        </div>
+        <p>
+          Greenwave Staffing Inc provides expert global staffing solutions for your organization.
+          We specialize in connecting businesses with highly skilled, pre-screened professionals across multiple
+          industries and job roles. Our strategic hiring approach ensures that companies gain access to top talent while
+          reducing time-to-hire and recruitment costs.
+        </p>
+        <!-- Social Icons (NOT REMOVED) -->
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+           <ul>
+          <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          <li><a href="careers.html"><i class="fas fa-chevron-right"></i> Careers</a></li>
+          <li><a href="blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          <li><a href="industries.html"><i class="fas fa-chevron-right"></i> Industries</a></li>
+        </ul>
+      </div>
+      <!-- Services -->
+      <div class="footer-col">
+        <h5>Services</h5>
+         <ul>
+          <li><a href="service-staffing-augmentation.html"><i class="fas fa-chevron-right"></i>Staffing Augmentation</a></li>
+          <li><a href="service-direct-hiring-staffing.html"><i class="fas fa-chevron-right"></i>Direct Hire Staffing</a></li>
+          <li><a href="service-contrat-to-hire-staffing.html"><i class="fas fa-chevron-right"></i>Contract-to-Hire Staffing</a></li>
+          <li><a href="service-contract-staffing.html"><i class="fas fa-chevron-right"></i>Contract Staffing</a></li>
+          <li><a href="service-offshoring.html"><i class="fas fa-chevron-right"></i>Offshore Staffing</a></li>
+          <li><a href="service-recruitment-outsourcing.html"><i class="fas fa-chevron-right"></i>Recruitment Process Outsourcing</a></li>
+        </ul>
+      </div>
+      <!-- New Get In Touch Column -->
+      <div class="footer-col footer-contact">
+        <h5>Get In Touch</h5>
+        <div class="office-block">
+          <strong>USA Office (Head Quarters):</strong>
+          <p>525 Randall Ave, Ste 100 PMB 388
+            Cheyenne, WY 82001</p>
+        </div>
+        <div class="office-block">
+          <strong>USA Office (Main Branch):</strong>
+          <p>8735 Dunwoody Place STE R Atlanta, GA 30350</p>
+        </div>
+        <div class="office-block">
+          <strong>UK Office</strong>
+          <p>Brunswick Street, Cheltenham, Gloucester, UK GL504HA</p>
+        </div>
+        <div class="office-block">
+          <strong>Canada Office:</strong>
+          <p>Unit 1707, Mississauga, Ontario L5B0A1</p>
+        </div>
+        <div class="office-block">
+          <strong> Contact</strong>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@greenwavestaff.com">info@greenwavestaff.com</a>
+          </p>
+          <p>
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+14043017997">404 301-7997</a> ext: 800
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p style="color:rgba(241, 234, 234, 0.855);font-size:13px">
+        © <span id="year"></span> Greenwave Staffing INC. All rights reserved.
+      </p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER -->
+
+  <!-- CONSULTATION PANEL (copy from index.html) -->
+  <div class="consult-overlay" id="consultOverlay" onclick="handleOverlayClick(event)">
+    <div class="consult-panel" id="consultPanel">
+      <button class="consult-close" onclick="closeConsultForm()"><i class="fas fa-times"></i></button>
+      <div class="consult-header">
+        <div class="consult-icon"><i class="fas fa-calendar-check"></i></div>
+        <h2>Free Consultation</h2>
+        <p>Tell us your needs and we'll connect you with the right talent — fast.</p>
+      </div>
+      <div class="consult-body">
+        <div class="consult-field"><label>Full Name</label><input type="text" placeholder="John Smith"></div>
+        <div class="consult-field"><label>Email Address</label><input type="email" placeholder="john@company.com"></div>
+        <div class="consult-field"><label>Phone Number</label><input type="tel" placeholder="+1 (555) 000-0000">
+        </div>
+        <div class="consult-field"><label>Company Name</label><input type="text" placeholder="Your Company">
+        </div>
+        <div class="consult-field">
+          <label>What are you looking for?</label>
+          <select>
+            <option value="">Select an option</option>
+            <option>Hire Talent / Staff</option>
+            <option>Find a Job</option>
+            <option>Workforce Consulting</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="consult-field"><label>Message (Optional)</label><textarea placeholder="Tell us more..."
+            rows="3"></textarea></div>
+        <button class="consult-submit"><i class="fas fa-paper-plane"></i> Book My Free Consultation</button>
+        <p class="consult-note"><i class="fas fa-lock"></i> Your info is 100% secure and never shared.</p>
+      </div>
+    </div>
+  </div>
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/14043017997" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

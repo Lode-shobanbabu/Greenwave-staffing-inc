@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs & Insights – Greenwave Staffing LLC</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+
+</head>
+
+<body>
+
+    <div class="consultation-tab" onclick="openConsultForm()">
+        <span><i class="fas fa-calendar-check"></i> Free Consultation</span>
+    </div>
+    <!-- TOP INFO BAR -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="tel:+1 404 301-7997 ext: 800"><i class="fas fa-phone-alt"></i> Call Us: +1 404 301-7997</a>
+            <a href="mailto:info@greenwavestaff.com"><i class="fas fa-envelope"></i> info@greenwavestaff.com</a>
+        </div>
+        <div class="top-bar-right">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" style="margin:0 6px"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="margin-left:6px"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <!-- HEADER -->
+  <header class="header" id="mainHeader">
+    <div class="logo">
+      <a href="index.html"><img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC"></a>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <div class="nav-dropdown">
+        <a href="#services" class="nav-dropdown-toggle">
+          Offering <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="service-staffing-augmentation.html">Staffing Augmentation </a>
+          <a href="service-direct-hiring-staffing.html">Direct Hire Staffing</a>
+          <a href="service-contrat-to-hire-staffing.html">Contract to Hire Staffing</a>
+          <a href="service-contract-staffing.html">Contract Staffing</a>
+          <a href="service-offshoring.html">Offshore Staffing </a>
+          <a href="service-recruitment-outsourcing.html">Recruitment Process Outsourcing </a>
+        </div>
+      </div>
+
+      <a href="industries.html">Industries</a>
+      <a href="careers.html">Careers</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-btns">
+     <a href="careers.html"><button class="btn-teal"><i class="fas fa-briefcase"></i> Find Jobs</button></a>
+      <a href="contact.html"><button class="btn-teal"><i class="fas fa-briefcase"></i> Get In Touch</button></a>
+      
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <img src="assets/img/logo/greenwave (1).png" alt="Greenwave Staffing LLC">
+      </div>
+      <span class="close-menu" onclick="toggleMenu()"><i class="fas fa-times"></i></span>
+    </div>
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <a href="about.html" onclick="toggleMenu()">About Us</a>
+    <div class="mobile-dropdown">
+      <input type="checkbox" id="servicesToggle" class="dropdown-toggle-input">
+      <label for="servicesToggle" class="mobile-dropdown-toggle">
+        Services <i class="fas fa-chevron-down"></i>
+      </label>
+      <div class="mobile-dropdown-menu">
+        <a href="service-staffing-augmentation.html" onclick="toggleMenu()">Staffing Augmentation</a>
+        <a href="service-direct-hiring-staffing.html" onclick="toggleMenu()">Direct Hire Staffing</a>
+        <a href="service-contrat-to-hire-staffing.html" onclick="toggleMenu()">Contract to Hire Staffing</a>
+        <a href="service-contract-staffing.html" onclick="toggleMenu()">Contract Staffing</a>
+        <a href="service-offshoring.html" onclick="toggleMenu()">Offshore Staffing </a>
+        <a href="service-recruitment-outsourcing.html" onclick="toggleMenu()">Recruitment Process Outsourcing</a>
+      </div>
+    </div>
+    <a href="industries.html" onclick="toggleMenu()">Industries</a>
+    <a href="careers.html" onclick="toggleMenu()">Careers</a>
+    <a href="blogs.html" onclick="toggleMenu()">Blogs</a>
+    <a href="contact.html" onclick="toggleMenu()">Contact</a>
+    <div class="mobile-btns">
+      <a href="careers.html"><button class="btn-teal" style="justify-content:center"><i class="fas fa-briefcase"></i> Find Jobs</button></a>
+     <a href="contact.html"><button class="btn-teal" style="justify-content:center"><i class="fas fa-briefcase"></i> Get In Touch</button></a>
+
+    </div>
+  </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero-tag"><i class="fas fa-newspaper"></i> Insights & Resources</div>
+        <h1>Blogs & Hiring <span>Insights</span></h1>
+
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            Blogs
+        </nav>
+    </section>
+
+    <!-- FILTER TAB BAR -->
+
+
+    <!-- MAIN BLOGS SECTION -->
+    <div class="bl-section">
+        <!-- ══ FEATURED BLOG (Blog 1 — Trends) ══ -->
+
+
+        <!-- ══ BLOG GRID (5 remaining blogs) ══ -->
+        <div class="bl-grid-header">
+            <h3>More <span>Articles</span></h3>
+            <span class="bl-count-label">Showing <strong id="visibleCount">5</strong> articles</span>
+        </div>
+
+        <div class="bl-grid" id="blGrid">
+
+            <!-- Blog 2 — Contract Staffing (Staffing) -->
+            <a href="top-hiring-trends-blog.html" class="bl-card" data-cat="staffing">
+                <div class="bl-card-img">
+                    <img src="assets/img/images/blogimagetwo.webp" alt="Contract Staffing Benefits">
+                    <span class="bl-card-cat">Staffing</span>
+                    <span class="bl-card-audience">For Employers</span>
+                </div>
+                <div class="bl-card-body">
+                    <div class="bl-card-meta">
+                        <i class="fas fa-calendar-alt"></i> April 10, 2026
+                        <span class="bl-card-meta-dot"></span>
+                        <i class="fas fa-clock"></i> 5 min read
+                    </div>
+                    <h4>Top Hiring Trends</h4>
+                    <p>Discover the latest workforce trends shaping the recruitment landscape this year and how to stay
+                        ahead.</p>
+                    <div class="bl-card-footer">
+                        <div class="bl-card-author">
+                            <div class="bl-card-av">G</div>
+                            <span class="bl-card-author-name">Greenwave Team</span>
+                        </div>
+                        <span class="bl-card-read-link">Read More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Blog 3 — Offshore Staffing (Staffing) -->
+            <a href="interview-tips-blog.html" class="bl-card" data-cat="staffing">
+                <div class="bl-card-img">
+                    <img src="assets/img/images/blogimagethree.webp" alt="Offshore Staffing">
+                    <span class="bl-card-cat">Staffing</span>
+                    <span class="bl-card-audience">For Employers</span>
+                </div>
+                <div class="bl-card-body">
+                    <div class="bl-card-meta">
+                        <i class="fas fa-calendar-alt"></i> March 18, 2026
+                        <span class="bl-card-meta-dot"></span>
+                        <i class="fas fa-clock"></i> 3 min read
+                    </div>
+                    <h4>Interview Tips for Candidates</h4>
+                    <p>Ace your next interview with these proven tips and strategies from Greenwave's expert career
+                        coaches.</p>
+                    <div class="bl-card-footer">
+                        <div class="bl-card-author">
+                            <div class="bl-card-av">G</div>
+                            <span class="bl-card-author-name">Greenwave Team</span>
+                        </div>
+                        <span class="bl-card-read-link">Read More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Blog 4 — RPO (HR Strategy) -->
+            <a href="reduce-recruitment-time-blog.html" class="bl-card" data-cat="hr-strategy">
+                <div class="bl-card-img">
+                    <img src="assets/img/images/blogimagefour.webp" alt="What is RPO">
+                    <span class="bl-card-cat">HR Strategy</span>
+                    <span class="bl-card-audience">For Employers</span>
+                </div>
+                <div class="bl-card-body">
+                    <div class="bl-card-meta">
+                        <i class="fas fa-calendar-alt"></i> March 18, 2026
+                        <span class="bl-card-meta-dot"></span>
+                        <i class="fas fa-clock"></i> 5 min read
+                    </div>
+                    <h4>How to Reduce Recruitment Time</h4>
+                    <p>Practical strategies to streamline your hiring process and cut time-to-fill without sacrificing
+                        quality.</p>
+                    <div class="bl-card-footer">
+                        <div class="bl-card-author">
+                            <div class="bl-card-av">G</div>
+                            <span class="bl-card-author-name">Greenwave Team</span>
+                        </div>
+                        <span class="bl-card-read-link">Read More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Blog 5 — ATS Resume Tips (Career Tips) -->
+            <a href="industries-blog.html" class="bl-card" data-cat="career-tips">
+                <div class="bl-card-img">
+                    <img src="assets/img/images/blogimageone.webp" alt="ATS Resume Tips">
+                    <span class="bl-card-cat">Career Tips</span>
+                    <span class="bl-card-audience">For Job Seekers</span>
+                </div>
+                <div class="bl-card-body">
+                    <div class="bl-card-meta">
+                        <i class="fas fa-calendar-alt"></i> March 10, 2026
+                        <span class="bl-card-meta-dot"></span>
+                        <i class="fas fa-clock"></i> 4 min read
+                    </div>
+                    <h4>Building High-Performance Teams Across Industries</h4>
+                    <p>Discover how businesses across multiple industries build strong, agile, and high-performing teams
+                        for long-term success.</p>
+                    <div class="bl-card-footer">
+                        <div class="bl-card-author">
+                            <div class="bl-card-av">G</div>
+                            <span class="bl-card-author-name">Greenwave Team</span>
+                        </div>
+                        <span class="bl-card-read-link">Read More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Blog 6 — Interview Tips (Career Tips) -->
+
+
+        </div><!-- /.bl-grid -->
+
+        <!-- ══ NEWSLETTER CTA STRIP ══ -->
+
+
+    </div><!-- /.bl-section -->
+
+    <!-- FINAL CTA -->
+    <section class="cta-section">
+        <div class="cta-inner fade-up">
+            <h2>Need Skilled Employees Fast?</h2>
+            <p>Talk with our staffing experts today. We'll help you find the right talent — quickly, affordably, and at
+                scale.</p>
+            <div class="cta-btns">
+                <a href="tel:+14043017997" class="btn-cta-white"><i class="fas fa-phone-alt"></i> Contact Us</a>
+                <a href="https://wa.me/14043017997" class="btn-cta-outline"><i class="fab fa-whatsapp"></i> WhatsApp
+                    Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom:14px">
+                    <h4>GREENWAVE STAFFING INC</h4>
+                </div>
+                <p> Greenwave Staffing Inc provides expert global staffing solutions for your organization.
+                    We specialize in connecting businesses with highly skilled, pre-screened professionals across
+                    multiple
+                    industries and job roles. Our strategic hiring approach ensures that companies gain access to top
+                    talent while
+                    reducing time-to-hire and recruitment costs.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Quick Links</h5>
+                 <ul>
+          <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          <li><a href="careers.html"><i class="fas fa-chevron-right"></i> Careers</a></li>
+          <li><a href="blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          <li><a href="industries.html"><i class="fas fa-chevron-right"></i> Industries</a></li>
+        </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Services</h5>
+                <ul>
+          <li><a href="service-staffing-augmentation.html"><i class="fas fa-chevron-right"></i>Staffing Augmentation</a></li>
+          <li><a href="service-direct-hiring-staffing.html"><i class="fas fa-chevron-right"></i>Direct Hire Staffing</a></li>
+          <li><a href="service-contrat-to-hire-staffing.html"><i class="fas fa-chevron-right"></i>Contract-to-Hire Staffing</a></li>
+          <li><a href="service-contract-staffing.html"><i class="fas fa-chevron-right"></i>Contract Staffing</a></li>
+          <li><a href="service-offshoring.html"><i class="fas fa-chevron-right"></i>Offshore Staffing</a></li>
+          <li><a href="service-recruitment-outsourcing.html"><i class="fas fa-chevron-right"></i>Recruitment Process Outsourcing</a></li>
+        </ul>
+            </div>
+            <div class="footer-col footer-contact">
+                <h5>Get In Touch</h5>
+                <div class="office-block">
+                    <strong>USA Office (Head Quarters):</strong>
+                    <p>525 Randall Ave, Ste 100 PMB 388, Cheyenne, WY 82001</p>
+                </div>
+                <div class="office-block">
+                    <strong>USA Office (Main Branch):</strong>
+                    <p>8735 Dunwoody Place STE R Atlanta, GA 30350</p>
+                </div>
+                <div class="office-block">
+                    <strong>UK Office:</strong>
+                    <p>Brunswick Street, Cheltenham, Gloucester, UK GL504HA</p>
+                </div>
+                <div class="office-block">
+                    <strong>Canada Office:</strong>
+                    <p>Unit 1707, Mississauga, Ontario L5B0A1</p>
+                </div>
+                <div class="office-block">
+                    <strong>Contact</strong>
+                    <p><i class="fas fa-envelope"></i> <a
+                            href="mailto:info@greenwavestaff.com">info@greenwavestaff.com</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+14043017997">404 301-7997</a> ext: 800</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="color:rgba(241,234,234,.855);font-size:13px">© <span id="year"></span> Greenwave Staffing INC. All
+                rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/14043017997" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- CONSULTATION PANEL -->
+    <div class="consult-overlay" id="consultOverlay" onclick="handleOverlayClick(event)">
+        <div class="consult-panel" id="consultPanel">
+            <button class="consult-close" onclick="closeConsultForm()"><i class="fas fa-times"></i></button>
+            <div class="consult-header">
+                <div class="consult-icon"><i class="fas fa-calendar-check"></i></div>
+                <h2>Free Consultation</h2>
+                <p>Tell us your needs and we'll connect you with the right talent — fast.</p>
+            </div>
+            <div class="consult-body">
+                <div class="consult-field"><label>Full Name</label><input type="text" placeholder="John Smith"
+                        id="cName"></div>
+                <div class="consult-field"><label>Email Address</label><input type="email"
+                        placeholder="john@company.com" id="cEmail"></div>
+                <div class="consult-field"><label>Phone Number</label><input type="tel" placeholder="+1 (555) 000-0000"
+                        id="cPhone"></div>
+                <div class="consult-field"><label>Message</label><textarea
+                        placeholder="Tell us more about your requirement..." id="cMessage" rows="3"></textarea></div>
+                <button class="consult-submit" onclick="submitConsultForm()">
+                    <i class="fas fa-paper-plane"></i> Book My Free Consultation
+                </button>
+                <p class="consult-note"><i class="fas fa-lock"></i> Your info is 100% secure and never shared.</p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

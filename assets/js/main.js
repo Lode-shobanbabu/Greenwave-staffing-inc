@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // TESTIMONIAL SLIDER
- // TESTIMONIAL SLIDER
+  // TESTIMONIAL SLIDER
   const testiTrack = document.getElementById('testiTrack');
   const testiDots = document.querySelectorAll('.testi-dot');
 
@@ -255,162 +255,309 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // HERO SLIDER
 
-   (function () {
-            const track = document.getElementById('hsTrack');
-            if (!track) return;
 
-            const allDots = document.querySelectorAll('.hs-dot');
-            const prevBtn = document.getElementById('hsPrev');
-            const nextBtn = document.getElementById('hsNext');
-            const slides = track.querySelectorAll('.hs-slide');
+  (function () {
 
-            const TOTAL = 3;
-            const AUTO_MS = 6000;
-            const LETTER_MS = 110;   // ms between each letter landing
-            const SLIDE_WAIT = 200;  // ms after slide transition starts
+    const track = document.getElementById('hsTrack');
+    if (!track) return;
 
-            let current = 0;
-            let autoTimer = null;
-            let dropTimers = [];
-            let isHovered = false;
+    const slides = track.querySelectorAll('.hs-slide');
+    const dots = document.querySelectorAll('.hs-dot');
 
-            /* ── STEP 1: Rebuild every h1 — wrap words in .hs-line divs,
-                          each character in .hs-char spans ── */
-            slides.forEach(slide => {
-                const h1 = slide.querySelector('.hs-title');
-                if (!h1) return;
+    const prevBtn = document.getElementById('hsPrev');
+    const nextBtn = document.getElementById('hsNext');
 
-                // Collect all tokens (char + isTeal flag, or br)
-                const tokens = [];
-                (function walk(node, teal) {
-                    if (node.nodeType === 3) {
-                        for (const ch of node.textContent) tokens.push({ ch, teal });
-                    } else if (node.nodeName === 'BR') {
-                        tokens.push({ br: true });
-                    } else if (node.nodeName === 'SPAN') {
-                        node.childNodes.forEach(c => walk(c, true));
-                    } else {
-                        node.childNodes.forEach(c => walk(c, teal));
-                    }
-                })(Object.assign(document.createElement('div'), { innerHTML: h1.innerHTML }), false);
+    const TOTAL = slides.length;
 
-                /*
-                  Group tokens into LINES (split on spaces) and wrap each line
-                  in a .hs-line div (overflow:hidden) so letters are clipped
-                  above before they land — exactly like in the video.
-                  Spaces between words become real space characters (not spans)
-                  so wrapping is natural.
-                */
+    const AUTO_MS = 7000;
+    const LETTER_DELAY = 95;
 
-                // Split into line groups by collecting words, then let CSS wrap
-                // Actually: wrap ALL chars in spans but put them inside a single
-                // .hs-line so the overflow:hidden clips mid-animation chars.
-                // We use ONE .hs-line per natural line break (BR token).
+    let current = 0;
+    let auto = null;
+    let isHovered = false;
 
-                let lineTokens = [[]];
-                tokens.forEach(t => {
-                    if (t.br) {
-                        lineTokens.push([]);
-                    } else {
-                        lineTokens[lineTokens.length - 1].push(t);
-                    }
+    /* =========================================
+       BUILD LETTERS
+    ========================================= */
+
+    slides.forEach(slide => {
+
+      const title = slide.querySelector('.hs-title');
+      if (!title) return;
+
+      const originalHTML = title.innerHTML;
+
+      let finalHTML = '';
+
+      originalHTML.split('<br>').forEach(line => {
+
+        let lineHTML = '';
+
+        const temp = document.createElement('div');
+        temp.innerHTML = line;
+
+        function parse(node, teal = false) {
+
+          // TEXT
+          // TEXT
+          if (node.nodeType === 3) {
+
+            const words = node.textContent.split(' ');
+
+            words.forEach((word, wi) => {
+
+              if (wi > 0) {
+                lineHTML += `<span class="hs-space">&nbsp;</span>`;
+              }
+
+              if (word.length > 0) {
+                lineHTML += `<span class="hs-word">`;
+                [...word].forEach(char => {
+                  lineHTML += `<span class="${teal ? 'hs-char hs-char--teal' : 'hs-char'}">${char}</span>`;
                 });
+                lineHTML += `</span>`;
+              }
 
-                h1.innerHTML = lineTokens.map(line => {
-                    const inner = line.map(t => {
-                        if (t.ch === ' ') {
-                            return '<span class="hs-space">&nbsp;</span>';
-                        }
-                        const cls = t.teal ? 'hs-char hs-char--teal' : 'hs-char';
-                        return `<span class="${cls}">${t.ch}</span>`;
-                    }).join('');
-                    return `<div class="hs-line">${inner}</div>`;
-                }).join('');
             });
 
-            /* ── STEP 2: Reset letters — back to hidden-above state ── */
-            function resetLetters(idx) {
-                slides[idx]?.querySelectorAll('.hs-char').forEach(el => {
-                    // Instant reset — no transition
-                    el.style.transition = 'none';
-                    // el.style.transform = 'translateY(-1.4em) rotate(-90deg) scale(0.5)';
-                    el.style.transform = 'translateY(-220px) rotate(-90deg) scale(0.3)';
-                    el.style.opacity = '0'; // clip does the masking, not opacity
-                });
-            }
+          }
 
-            /* ── STEP 3: Animate letters dropping in ── */
-            function dropLetters(idx) {
-                dropTimers.forEach(clearTimeout);
-                dropTimers = [];
+          // SPAN
+          else if (node.nodeName === 'SPAN') {
 
-                const chars = slides[idx]?.querySelectorAll('.hs-char');
-                if (!chars) return;
+            node.childNodes.forEach(child => {
+              parse(child, true);
+            });
 
-                chars.forEach((el, i) => {
+          }
 
-                    const t = setTimeout(() => {
+          // OTHER ELEMENTS
+          else {
 
-                        el.style.opacity = '1';
+            node.childNodes.forEach(child => {
+              parse(child, teal);
+            });
 
-                        el.style.transition =
-                            'transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease';
+          }
 
-                        el.style.transform =
-                            'translateY(0) rotate(0deg) scale(1)';
+        }
 
-                    }, SLIDE_WAIT + i * LETTER_MS);
+        temp.childNodes.forEach(node => parse(node));
 
-                    dropTimers.push(t);
+        finalHTML += `
+                    <div class="hs-line">
+                        ${lineHTML}
+                    </div>
+                `;
 
-                });
-            }
+      });
 
-            /* ── STEP 4: Go to slide ── */
-            function goTo(n) {
-                const next = ((n % TOTAL) + TOTAL) % TOTAL;
+      title.innerHTML = finalHTML;
 
-                // Pre-reset the incoming slide's letters so they start hidden
-                resetLetters(next);
+    });
 
-                current = next;
-                track.style.transform = `translateX(-${current * (100 / TOTAL)}%)`;
-                allDots.forEach((d, i) => d.classList.toggle('active', i === current));
+    /* =========================================
+       RESET LETTERS
+    ========================================= */
 
-                // Start drop animation
-                dropLetters(current);
-            }
+    function resetLetters(index) {
 
-            /* ── STEP 5: Autoplay ── */
-            function startAuto() {
-                stopAuto();
-                autoTimer = setInterval(() => { if (!isHovered) goTo(current + 1); }, AUTO_MS);
-            }
-            function stopAuto() { clearInterval(autoTimer); autoTimer = null; }
+      const chars = slides[index].querySelectorAll('.hs-char');
 
-            /* ── STEP 6: Controls ── */
-            prevBtn?.addEventListener('click', () => { goTo(current - 1); startAuto(); });
-            nextBtn?.addEventListener('click', () => { goTo(current + 1); startAuto(); });
-            allDots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.index); startAuto(); }));
+      chars.forEach(char => {
 
-            track.addEventListener('mouseenter', () => { isHovered = true; });
-            track.addEventListener('mouseleave', () => { isHovered = false; });
+        char.classList.remove('show');
 
-            let tx = 0;
-            track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; isHovered = true; }, { passive: true });
-            track.addEventListener('touchend', e => {
-                const diff = tx - e.changedTouches[0].clientX;
-                isHovered = false;
-                if (Math.abs(diff) > 50) { goTo(diff > 0 ? current + 1 : current - 1); startAuto(); }
-            }, { passive: true });
+      });
 
-            document.addEventListener('visibilitychange', () => document.hidden ? stopAuto() : startAuto());
+    }
 
-            /* ── STEP 7: Init ── */
-            slides.forEach((_, i) => resetLetters(i));
-            goTo(0);
-            startAuto();
-        })();
+    /* =========================================
+       ANIMATE LETTERS
+    ========================================= */
+
+    function animateLetters(index) {
+
+      const chars = slides[index].querySelectorAll('.hs-char');
+
+      chars.forEach((char, i) => {
+
+        setTimeout(() => {
+
+          char.classList.add('show');
+
+        }, i * LETTER_DELAY);
+
+      });
+
+    }
+
+    /* =========================================
+       GO TO SLIDE
+    ========================================= */
+
+    function goTo(index) {
+
+      slides.forEach((_, i) => {
+        resetLetters(i);
+      });
+
+      current = (index + TOTAL) % TOTAL;
+
+      track.style.transform = `translateX(-${current * 100}vw)`;
+
+      dots.forEach((dot, i) => {
+
+        dot.classList.toggle('active', i === current);
+
+      });
+
+      setTimeout(() => {
+
+        animateLetters(current);
+
+      }, 250);
+
+    }
+
+    /* =========================================
+       AUTOPLAY
+    ========================================= */
+
+    function startAuto() {
+
+      clearInterval(auto);
+
+      auto = setInterval(() => {
+
+        if (!isHovered) {
+
+          goTo(current + 1);
+
+        }
+
+      }, AUTO_MS);
+
+    }
+
+    function stopAuto() {
+
+      clearInterval(auto);
+
+    }
+
+    /* =========================================
+       BUTTONS
+    ========================================= */
+
+    nextBtn?.addEventListener('click', () => {
+
+      goTo(current + 1);
+      startAuto();
+
+    });
+
+    prevBtn?.addEventListener('click', () => {
+
+      goTo(current - 1);
+      startAuto();
+
+    });
+
+    /* =========================================
+       DOTS
+    ========================================= */
+
+    dots.forEach(dot => {
+
+      dot.addEventListener('click', () => {
+
+        goTo(Number(dot.dataset.index));
+        startAuto();
+
+      });
+
+    });
+
+    /* =========================================
+       HOVER PAUSE
+    ========================================= */
+
+    track.addEventListener('mouseenter', () => {
+
+      isHovered = true;
+
+    });
+
+    track.addEventListener('mouseleave', () => {
+
+      isHovered = false;
+
+    });
+
+    /* =========================================
+       TOUCH SWIPE
+    ========================================= */
+
+    let startX = 0;
+
+    track.addEventListener('touchstart', e => {
+
+      startX = e.touches[0].clientX;
+
+    }, { passive: true });
+
+    track.addEventListener('touchend', e => {
+
+      const endX = e.changedTouches[0].clientX;
+
+      const diff = startX - endX;
+
+      if (Math.abs(diff) > 50) {
+
+        if (diff > 0) {
+
+          goTo(current + 1);
+
+        } else {
+
+          goTo(current - 1);
+
+        }
+
+        startAuto();
+
+      }
+
+    }, { passive: true });
+
+    /* =========================================
+       VISIBILITY
+    ========================================= */
+
+    document.addEventListener('visibilitychange', () => {
+
+      if (document.hidden) {
+
+        stopAuto();
+
+      } else {
+
+        startAuto();
+
+      }
+
+    });
+
+    /* =========================================
+       INIT
+    ========================================= */
+
+    goTo(0);
+    startAuto();
+
+  })();
+
 
 
   // SERVICES CAROUSEL
@@ -516,117 +663,137 @@ document.addEventListener('DOMContentLoaded', function () {
   // industries pagination section code
   /* INDUSTRIES PAGINATION */
   /* INDUSTRIES PAGINATION */
-(function () {
-  const cards = document.querySelectorAll('.ipc');
-  const pagination = document.getElementById('pagination');
-  if (!cards.length || !pagination) return;
-  const cardsPerPage = 6;
-  let currentPage = 1;
-  function showPage(page) {
-    currentPage = page;
-    const start = (page - 1) * cardsPerPage;
-    const end = start + cardsPerPage;
-    cards.forEach((card, index) => {
-      if (index >= start && index < end) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
+  (function () {
+    const cards = document.querySelectorAll('.ipc');
+    const pagination = document.getElementById('pagination');
+    if (!cards.length || !pagination) return;
+    const cardsPerPage = 6;
+    let currentPage = 1;
+    function showPage(page) {
+      currentPage = page;
+      const start = (page - 1) * cardsPerPage;
+      const end = start + cardsPerPage;
+      cards.forEach((card, index) => {
+        if (index >= start && index < end) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
 
-    });
-
-    updateButtons();
-
-    window.scrollTo({
-      top: document.querySelector('.ipg-section').offsetTop - 100,
-      behavior: 'smooth'
-    });
-
-  }
-  function updateButtons() {
-    pagination.innerHTML = '';
-    const totalPages = Math.ceil(cards.length / cardsPerPage);
-    // PREV BUTTON
-    const prevBtn = document.createElement('button');
-    prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
-    prevBtn.disabled = currentPage === 1;
-    prevBtn.addEventListener('click', () => {
-      if (currentPage > 1) {
-        showPage(currentPage - 1);
-      }
-    });
-    pagination.appendChild(prevBtn);
-    // PAGE NUMBER LOGIC
-    const maxVisible = 3;
-    let startPage = Math.max(1, currentPage - 1);
-    let endPage = Math.min(totalPages, startPage + maxVisible - 1);
-    if (endPage - startPage < maxVisible - 1) {
-      startPage = Math.max(1, endPage - maxVisible + 1);
-    }
-    // FIRST PAGE
-    if (startPage > 1) {
-      const firstBtn = document.createElement('button');
-      firstBtn.innerText = 1;
-      firstBtn.addEventListener('click', () => {
-        showPage(1);
-      });
-      pagination.appendChild(firstBtn);
-      // DOTS
-      if (startPage > 2) {
-
-        const dots = document.createElement('span');
-        dots.innerHTML = '...';
-        dots.style.padding = '0 8px';
-
-        pagination.appendChild(dots);
-
-      }
-    }
-
-    // VISIBLE PAGE BUTTONS
-    for (let i = startPage; i <= endPage; i++) {
-
-      const btn = document.createElement('button');
-
-      btn.innerText = i;
-
-      if (i === currentPage) {
-        btn.classList.add('active');
-      }
-
-      btn.addEventListener('click', () => {
-        showPage(i);
       });
 
-      pagination.appendChild(btn);
+      updateButtons();
+
+      window.scrollTo({
+        top: document.querySelector('.ipg-section').offsetTop - 100,
+        behavior: 'smooth'
+      });
 
     }
-    // LAST PAGE
-    if (endPage < totalPages) {
-      if (endPage < totalPages - 1) {
-        const dots = document.createElement('span');
-        dots.innerHTML = '...';
-        dots.style.padding = '0 8px';
-        pagination.appendChild(dots);
-      }
-      const lastBtn = document.createElement('button');
-      lastBtn.innerText = totalPages;
-      lastBtn.addEventListener('click', () => {
-        showPage(totalPages);
+    function updateButtons() {
+      pagination.innerHTML = '';
+      const totalPages = Math.ceil(cards.length / cardsPerPage);
+      // PREV BUTTON
+      const prevBtn = document.createElement('button');
+      prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+      prevBtn.disabled = currentPage === 1;
+      prevBtn.addEventListener('click', () => {
+        if (currentPage > 1) {
+          showPage(currentPage - 1);
+        }
       });
-      pagination.appendChild(lastBtn);
-    }
-    // NEXT BUTTON
-    const nextBtn = document.createElement('button');
-    nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
-    nextBtn.disabled = currentPage === totalPages;
-    nextBtn.addEventListener('click', () => {
-      if (currentPage < totalPages) {
-        showPage(currentPage + 1);
+      pagination.appendChild(prevBtn);
+      // PAGE NUMBER LOGIC
+      const maxVisible = 3;
+      let startPage = Math.max(1, currentPage - 1);
+      let endPage = Math.min(totalPages, startPage + maxVisible - 1);
+      if (endPage - startPage < maxVisible - 1) {
+        startPage = Math.max(1, endPage - maxVisible + 1);
       }
+      // FIRST PAGE
+      if (startPage > 1) {
+        const firstBtn = document.createElement('button');
+        firstBtn.innerText = 1;
+        firstBtn.addEventListener('click', () => {
+          showPage(1);
+        });
+        pagination.appendChild(firstBtn);
+        // DOTS
+        if (startPage > 2) {
+
+          const dots = document.createElement('span');
+          dots.innerHTML = '...';
+          dots.style.padding = '0 8px';
+
+          pagination.appendChild(dots);
+
+        }
+      }
+
+      // VISIBLE PAGE BUTTONS
+      for (let i = startPage; i <= endPage; i++) {
+
+        const btn = document.createElement('button');
+
+        btn.innerText = i;
+
+        if (i === currentPage) {
+          btn.classList.add('active');
+        }
+
+        btn.addEventListener('click', () => {
+          showPage(i);
+        });
+
+        pagination.appendChild(btn);
+
+      }
+      // LAST PAGE
+      if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+          const dots = document.createElement('span');
+          dots.innerHTML = '...';
+          dots.style.padding = '0 8px';
+          pagination.appendChild(dots);
+        }
+        const lastBtn = document.createElement('button');
+        lastBtn.innerText = totalPages;
+        lastBtn.addEventListener('click', () => {
+          showPage(totalPages);
+        });
+        pagination.appendChild(lastBtn);
+      }
+      // NEXT BUTTON
+      const nextBtn = document.createElement('button');
+      nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+      nextBtn.disabled = currentPage === totalPages;
+      nextBtn.addEventListener('click', () => {
+        if (currentPage < totalPages) {
+          showPage(currentPage + 1);
+        }
+      });
+      pagination.appendChild(nextBtn);
+    }
+    showPage(1);
+  })();
+
+
+
+  // ── blogs hiding code  ──
+  // BLOG TOGGLE
+  window.toggleBlogs = function () {
+    const extras = document.querySelectorAll('.blog-extra');
+    const icon = document.getElementById('viewAllIcon');
+    const label = document.getElementById('viewAllText');
+    if (!extras.length) return;
+
+    const isOpen = extras[0].style.display !== 'none';
+
+    extras.forEach(card => {
+      card.style.display = isOpen ? 'none' : 'block';
     });
-    pagination.appendChild(nextBtn);
-  }
-  showPage(1);
-})();
+
+    if (icon) icon.className = isOpen ? 'fas fa-newspaper' : 'fas fa-chevron-up';
+    if (label) label.textContent = isOpen ? 'View All Blogs' : 'Show Less';
+  };
 }); // END DOMContentLoaded
